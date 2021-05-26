@@ -1,0 +1,52 @@
+.inner{
+  position: relative;
+  width: 1180px;
+  margin: 0 auto;
+}
+
+#wrap{
+  header{
+    .header_bottom{
+      height: 72px;
+      background: pink;
+
+      #lnb{
+
+    }
+      #gnb{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 100%;
+      .logo{
+        a{
+          display: inline-block;
+          height: 72px;
+          img{
+            display: block;
+            vertical-align: middle;
+            // height: 100%;
+
+          }
+        }
+        // 로고 끝
+      }
+      #gnb_menu{
+        ul{
+          overflow: hidden;
+          float: right;
+          li{
+            float: left;
+            a{
+
+            }
+          }
+        }
+      }
+    }
+      .support{
+
+    }
+    }
+  }
+}

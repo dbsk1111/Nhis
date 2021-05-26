@@ -1,0 +1,36 @@
+.inner {
+  position: relative;
+  width: 1180px;
+  margin: 0 auto;
+}
+
+#wrap header .header_bottom {
+  height: 72px;
+  background: pink;
+}
+
+#wrap header .header_bottom #gnb {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+}
+
+#wrap header .header_bottom #gnb .logo a {
+  display: inline-block;
+  height: 72px;
+}
+
+#wrap header .header_bottom #gnb .logo a img {
+  display: block;
+  vertical-align: middle;
+}
+
+#wrap header .header_bottom #gnb #gnb_menu ul {
+  overflow: hidden;
+  float: right;
+}
+
+#wrap header .header_bottom #gnb #gnb_menu ul li {
+  float: left;
+}
