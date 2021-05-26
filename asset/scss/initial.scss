@@ -1,11 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+// font-family: 'Nanum Gothic', sans-serif;
+// font-family: 'Noto Sans KR', sans-serif;
+
+
+@font-face {
+ font-family: 'NanumBarunGothic';
+ font-style: normal;
+ font-weight: 400;
+ src: url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWeb.eot');
+ src: url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWeb.eot?#iefix') format('embedded-opentype'), url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWeb.woff') format('woff'), url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWeb.ttf') format('truetype');
+}
+
+@font-face {
+ font-family: 'NanumBarunGothic';
+ font-style: normal;
+ font-weight: 700;
+ src: url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebBold.eot');
+ src: url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebBold.eot?#iefix') format('embedded-opentype'), url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebBold.woff') format('woff'), url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebBold.ttf') format('truetype')
+}
+
+@font-face {
+ font-family: 'NanumBarunGothic';
+ font-style: normal;
+ font-weight: 300;
+ src: url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebLight.eot');
+ src: url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebLight.eot?#iefix') format('embedded-opentype'), url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebLight.woff') format('woff'), url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebLight.ttf') format('truetype');
+}
+
+// .nanumbarungothic * {
+//  font-family: 'NanumBarunGothic', sans-serif;
+// }
+
+
+
 /*initial css*/
 html,body{
   height: 100%;
 }
 
 body{
-  background: $layoutBg;
   color: $fontColorBasic;
+  font-family: 'Nanum Gothic', sans-serif;
+  line-height: 1.5;
 }
 
 html,body,ul,li,h1,h2,h3,h4,h5,h6{
@@ -19,9 +55,13 @@ li{
 
 a{
   text-decoration: none;
-  color: $fontColorPrimary;
-  transition: .5s;
+  color: $link;
+  // transition: .5s;
   &:hover{
-    color: $fontColorHover;
+    // color: $fontColorHover;
   }
+}
+
+#gnb a{
+  font-family: 'Noto Sans KR', sans-serif;
 }

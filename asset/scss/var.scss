@@ -3,21 +3,29 @@
 $siteWidth: 1320px;
 
 //font size
-$fontSizeSmall: 12px;
-$fontSizeNormal: 16px;
-$fontSizeMid: 18px;
-$fontSizeBig: 21px;
+$fontSmall: 13px;
+$fontNormal: 16px;
+$fontMid: 19px;
+$fontBig: 21px;
 
 // title text size
-$titleFontSizeSmall: 21px;
-$titleSizeNormal: 24px;
-$titleSizeMid: 26px;
-$titleSizeBig: 32px;
+$titleSmall: 20px;
+$titleNormal: 24px;
+$titleMid: 26px;
+$titleBig: 32px;
+
+// chage font
+$change15: 15px;
+$change28: 21px;
+$change28: 28px;
+
 
 // background color
 $layoutBg: #fff3c4;
 
 // font color
+$red: #ee0700;
+$darkRed: #d7021b;
 $fontColorBasic: #666666;
 $fontColorPrimary: #b8944d;
 $fontColorHover: #e3a936;
@@ -29,3 +37,9 @@ $borderColerSub: #997939;
 // button color, Global button
 $gbtnColor: #b8944d;
 $gbtnColorHover: #e3a936;
+
+
+// gnb font color
+$link: #3a3a4a;
+$linklight: #6c6d73;
+$gnbColor: #44465c;

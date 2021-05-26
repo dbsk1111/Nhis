@@ -16,14 +16,13 @@
   height: 100%;
 }
 
-#wrap header .header_bottom #gnb .logo a {
-  display: inline-block;
-  height: 72px;
-}
-
 #wrap header .header_bottom #gnb .logo a img {
   display: block;
   vertical-align: middle;
+}
+
+#wrap header .header_bottom #gnb #gnb_menu {
+  flex: 1 1 auto;
 }
 
 #wrap header .header_bottom #gnb #gnb_menu ul {
@@ -33,4 +32,10 @@
 
 #wrap header .header_bottom #gnb #gnb_menu ul li {
   float: left;
+}
+
+#wrap header .header_bottom #gnb #gnb_menu ul li a {
+  display: block;
+  margin-left: 17px;
+  width: 160px;
 }
