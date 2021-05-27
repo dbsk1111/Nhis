@@ -21,6 +21,7 @@ $change28: 28px;
 
 
 // background color
+$bgColor: #f6f6f6;
 $layoutBg: #fff3c4;
 
 // font color
@@ -31,8 +32,10 @@ $fontColorPrimary: #b8944d;
 $fontColorHover: #e3a936;
 
 // border color
-$borderColorPrimary: #b8944d;
-$borderColerSub: #997939;
+$borderLine: #e1e3e6;
+$borderLine2: #e1e1e1;
+// $borderColorPrimary: #b8944d;
+// $borderColerSub: #997939;
 
 // button color, Global button
 $gbtnColor: #b8944d;
@@ -43,3 +46,6 @@ $gbtnColorHover: #e3a936;
 $link: #3a3a4a;
 $linklight: #6c6d73;
 $gnbColor: #44465c;
+
+$black: #000;
+$white: #fff;

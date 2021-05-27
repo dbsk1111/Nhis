@@ -1,9 +1,37 @@
 // component
 .dropdown_allow{
-  padding-right: 15px;
-  background: url('../img/arrow-navy-8x6.png') no-repeat right center;
-  // &:after{
-  //   content: '';
-  //
-  // }
+  // padding-right: 15px;
+  position: relative;
+  &:after{
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: 0;
+    display: block;
+    width: 10px;
+    height: 8px;
+    background: url('../img/arrow-navy.png') no-repeat right center / contain;
+    transform: translateY( -50% );
+  }
+}
+
+
+// .dropdown_allow{
+//   padding-right: 15px;
+//   background: no-repeat right center;
+//   background-image: url('../img/arrow-navy.png');
+// }
+
+.back_to_top{
+  position: fixed;
+  right: 40px;
+  bottom: 40px;
+  width: 40px;
+  height: 40px;
+  background: url(../img/btn-direction-top.png) no-repeat;
+  z-index: 10;
+}
+
+.point{
+  color: $red;
 }
