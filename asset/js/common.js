@@ -5,29 +5,50 @@ $(function(){
     $('.search_wrap').removeClass('on')
   })
   $('.header_bottom').mouseleave(function(){
-    $('header, .header_bottom').removeClass('on')
+    $('.header_bottom').removeClass('on')
     if( search_bar_open > 0){
       $('.search_wrap').addClass('on')
+    }else{
+      $('header').removeClass('on')
     }
   })
 
   // 검색창 노출
   let search_bar_open = 0;
   $('.search_button').click(function(){
+    console.log($(window).width())
 
     if( search_bar_open == 0 ){
-      $(this).addClass('on')
+      if( $(window).width() > 991 ){
+        $(this).addClass('on')
+      }
       $('.search_wrap').addClass('on')
+      $('header').addClass('on')
       search_bar_open = 1;
     }else{
       $(this).removeClass('on')
       $('.search_wrap').removeClass('on')
+      $('header').removeClass('on')
       search_bar_open = 0
     }
     // $('.search_wrap').toggleClass('on')
     $('.header_bottom').removeClass('on')
   })
+  $(window).resize(function(){
+    console.log($(window).width())
+    if( $(this).width() < 991 ){
+      $('.search_button').removeClass('on')
+    }else{
+      if( search_bar_open == 0 ){
+        $('.search_button').removeClass('on')
+      }else{
+        $('.search_button').addClass('on')
+      }
+    }
+  })
 
+
+  // 모든 메뉴 노출
   $('.all_menu_button').click(function(){
     $('.all_menu').toggleClass('on')
     $('body').toggleClass('on')

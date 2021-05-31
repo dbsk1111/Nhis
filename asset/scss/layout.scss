@@ -287,22 +287,24 @@ body.on{
           justify-content: flex-end;
           position: relative;
           top: 16px;
-          .search_button, .all_menu_button{
+          .support_button{
             display: flex;
             justify-content: center;
             align-items: center;
             width: 40px;
             height: 40px;
             cursor: pointer;
+            background: no-repeat center / 20px 20px;
           }
           .search_button{
-            background: url('../img/ico-search-navy.png') no-repeat center;
+            background-image: url('../img/ico-search-navy.png');
             &.on{
               background: $bgColorDark url('../img/ico-close.png') no-repeat center;
             }
           }
           .all_menu_button{
             margin-left: 10px;
+            background-image: url('../img/ico-menu-navy.png');
           }
         }
       // gnb 영역 끝
@@ -359,7 +361,7 @@ body.on{
       display: none;
       position: absolute;
       // top: 100%;
-      top: 118px;
+      // top: 118px;
       width: 100%;
       background: $bgWhite;
       border-top: 1px solid $borderLine;
@@ -451,6 +453,7 @@ footer{
         display: flex;
         justify-content: space-between;
         align-items: center;
+        position: relative;
         width: 244px;
         height: 40px;
         background: $bgWhite;
@@ -578,49 +581,92 @@ footer{
 // 1080
 
 @media screen and ( max-width: 991px ){
-  body{
-    background: skyblue;
-  }
-  .quick_menu{
-    display: none;
-  }
-  footer{
-    .footer_top{
-      flex-direction: column;
-      justify-content: center;
-      .footer_nav{
-        margin-bottom: 5px;
-      }
+  #wrap{
+    .quick_menu{
+      display: none;
     }
-    .footer_bottom{
-      flex-direction: column;
-      align-items: center;
-      margin-top: 25px;
-      .customer.service{
+    header{
+      .header_top{
         display: none;
       }
-      .footer_img{
-        width: 100%;
-        text-align: center;
-        .certification{
-          padding: 15px 0;
+      .header_bottom{
+        &:after{
+          content: '';
+          position: absolute;
+          top: 0;
+          right: 0;
+          width: 180px;
+          height: 74px;
+          background: url('../img/m-header-bg.png') no-repeat center / 100% 100%;
+          z-index: 1;
+        }
+        height: 64px;
+        border-bottom: 1px solid $borderLine;
+        #gnb{
+          .logo{
+            // top: 7px;
+            img{
+              width: 100px;
+            }
+          }
+          #gnb_menu{
+            display: none;
+          }
+          .support{
+            top: 8px;
+            z-index: 2;
+            .support_button{
+              width: 25px;
+              height: 25px;
+            }
+            .search_button{
+              background-image: url('../img/ico-search.png')
+            }
+            .all_menu_button{
+              background-image: url('../img/ico-menu-white.png')
+            }
+          }
+        }
+      }
+    }
+    footer{
+      .footer_top{
+        flex-direction: column;
+        justify-content: center;
+        .footer_nav{
+          margin-bottom: 5px;
+        }
+      }
+      .footer_bottom{
+        flex-direction: column;
+        align-items: center;
+        margin-top: 25px;
+        .customer.service{
+          display: none;
+        }
+        .footer_img{
           width: 100%;
-          top: auto;
-          border-top: 1px solid $borderLine;
-          border-bottom: 1px solid $borderLine;
+          text-align: center;
+          .certification{
+            padding: 15px 0;
+            width: 100%;
+            top: auto;
+            border-top: 1px solid $borderLine;
+            border-bottom: 1px solid $borderLine;
+          }
+          .sns{
+            // justify-content: center;
+            padding: 15px 0;
+          }
         }
-        .sns{
-          // justify-content: center;
-          padding: 15px 0;
+        .footer_txt{
+          text-align: center;
         }
-      }
-      .footer_txt{
-        text-align: center;
-      }
-      .copyright{
+        .copyright{
 
+        }
+        // footer bottom end
       }
-      // footer bottom end
     }
   }
 }
