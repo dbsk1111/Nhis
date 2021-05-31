@@ -45,13 +45,18 @@ li{
 
 a{
   text-decoration: none;
+  font-family: 'NBG', sans-serif;
   color: $link;
   // transition: .5s;
   &:hover{
     // color: $fontColorHover;
   }
 }
+input{
+  outline: none;
+  font-family: inherit;
+}
 
-#gnb a{
-  font-family: 'Noto Sans KR', sans-serif;
+button{
+  border: 0;
 }

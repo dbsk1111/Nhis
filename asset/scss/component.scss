@@ -13,14 +13,47 @@
     background: url('../img/arrow-navy.png') no-repeat right center / contain;
     transform: translateY( -50% );
   }
+  &.on:after{
+    transform: translateY( -50% ) rotate( 180deg );
+  }
 }
 
+.quick_menu{
+  position: fixed;
+  top: 50%;
+  right: 0;
+  width: 40px;
+  transform: translateY( -50% );
+  ul{
+    li{
+      margin-top: 1px;
+      transition: transform .4s;
+      &:first-child{
+        margin-top: 0;
+      }
+      &:hover{
+        transform: translateX( -85px );
+      }
+      a{
+        display: flex;
+        align-items: center;
+        width: 135px;
+        height: 40px;
+        line-height: 1.1;
+        color: $fontWhite;
+        font-size: $fontSmall;
+        background: $bgColorDark;
 
-// .dropdown_allow{
-//   padding-right: 15px;
-//   background: no-repeat right center;
-//   background-image: url('../img/arrow-navy.png');
-// }
+        img{
+          display: inline-block;
+          width: 40px;
+          height: 40px;
+          object-fit: none;
+        }
+      }
+    }
+  }
+}
 
 .back_to_top{
   position: fixed;
@@ -28,10 +61,70 @@
   bottom: 40px;
   width: 40px;
   height: 40px;
-  background: url(../img/btn-direction-top.png) no-repeat;
-  z-index: 10;
+  background: url('../img/btn-direction-top.png') no-repeat;
+  z-index: 1;
+  &:hover{
+    background-image: url('../img/btn-direction-top-on.png');
+  }
 }
 
 .point{
   color: $red;
+}
+
+.button{
+  cursor: pointer;
+}
+
+a[target="_blank"]{
+  img{
+    margin-left: 5px;
+  }
+}
+
+.window{
+  display: none;
+  // overflow-x: hidden;
+  position: absolute;
+  // bottom: 120%;
+  // width: 243px;
+  // max-height: 362px;
+  min-width: 130px;
+  padding: 15px 20px;
+  border: 1px solid #666779;
+  background: $bgWhite;
+  border-radius: 5px;
+  box-sizing: border-box;
+  z-index: 1;
+  a{
+    font-size: $change15;
+    line-height: 2;
+  }
+  &.on{
+    display: block;
+  }
+}
+
+.tag_list{
+  margin-top: 30px;
+  a{
+    display: inline-block;
+    margin-left: 5px;
+    padding: 0 12px;
+    height: 40px;
+    line-height: 40px;
+    color: $linklight;
+    font-size: $change15;
+    background: $bgColor;
+    border: 1px solid transparent;
+    border-radius: 8px;
+    box-sizing: border-box;
+    &:first-child{
+      margin-left: 0;
+    }
+    &:hover{
+      background: transparent;
+      border: 1px solid $bgColor;
+    }
+  }
 }

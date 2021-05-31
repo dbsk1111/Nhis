@@ -1,49 +1,5 @@
-body.on{
-  overflow: hidden;
-}
-
-.inner{
-  position: relative;
-  max-width: 1180px;
-  margin: 0 auto;
-  padding: 0 12px;
-}
-
-.all_menu{
-  position: fixed;
-  display: none;
-  justify-content: center;
-  align-items: center;
-  padding: 20px;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  text-align: center;
-  background-color: rgba(29, 29, 29, 0.75);
-  box-sizing: border-box;
-  z-index: 100;
-  &.on{
-    display: flex;
-  }
-  .all_menu_window{
-    padding: 20px;
-    width: 33%;
-    background: $bgWhite;
-    .all_menu_button{
-      float: right;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      width: 40px;
-      height: 40px;
-      background: $bgColorDark;
-      cursor: pointer;
-    }
-  }
-}
-
-#wrap{
+#wrap.sub_page{
+  background: blue;
   &:before, &:after{
     content: '';
     position: absolute;
