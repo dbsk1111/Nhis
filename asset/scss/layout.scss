@@ -19,7 +19,7 @@ body.on{
   right: 0;
   bottom: 0;
   left: 0;
-  text-align: center;
+  // text-align: center;
   background-color: rgba(29, 29, 29, 0.75);
   box-sizing: border-box;
   z-index: 100;
@@ -27,18 +27,77 @@ body.on{
     display: flex;
   }
   .all_menu_window{
-    padding: 20px;
-    width: 33%;
+    position: relative;
+    max-width: 1180px;
+    width: 90%;
     background: $bgWhite;
     .all_menu_button{
-      float: right;
       display: flex;
       justify-content: center;
       align-items: center;
-      width: 40px;
-      height: 40px;
-      background: $bgColorDark;
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      width: 32px;
+      height: 32px;
       cursor: pointer;
+    }
+    .title{
+      padding: 0 30px;
+      height: 72px;
+      color: $fontWhite;
+      font-size: $fontBig;
+      font-weight: 700;
+      background: $bgColorDark;
+      line-height: 72px;
+    }
+    .link{
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      padding-right: 60px;
+      height: 48px;
+      border-bottom: 1px solid $borderLine;
+      li{
+        margin-left: 15px;
+        padding-left: 15px;
+        line-height: 1;
+        border-left: 1px solid $borderLine;
+        &:first-child{
+          margin-left: 0;
+          padding-left: 0;
+          border-left: none;
+        }
+      }
+    }
+    .menu{
+      display: flex;
+      .menu_left{
+        flex: 0 0 220px;
+        background: $bgColor;
+        ul{
+          padding-top: 30px;
+          li{
+            display: block;
+            padding: 0 30px;
+            color: #3a3a4a;
+            font-size: 16px;
+            line-height: 42px;
+            cursor: pointer;
+            &.on{
+              color: $fontWhite;
+              background: $red;
+            }
+          }
+        }
+      }
+      .menu_right{
+        overflow-y: scroll;
+        flex: 1 auto;
+        height: 700px;
+        padding: 30px 60px;
+        box-sizing: border-box;
+      }
     }
   }
 }
@@ -366,6 +425,7 @@ body.on{
       background: $bgWhite;
       border-top: 1px solid $borderLine;
       border-bottom: 1px solid $borderLineDark;
+      box-shadow: 0 6px 6px rgba(0,0,0,0.15);
       &.on{
         display: block;
       }
@@ -406,7 +466,14 @@ body.on{
         }
       }
       .search_close{
-        display: none;
+        // display: none;
+        width: 100%;
+        height: 40px;
+        line-height: 40px;
+        text-align: center;
+        border-top: 1px solid #e1e3e6;
+        background-color: #fff;
+        font-size: 15px;
       }
       // search_bar end
     }
@@ -581,10 +648,10 @@ footer{
 // 1080
 
 @media screen and ( max-width: 991px ){
+  .quick_menu{
+    display: none;
+  }
   #wrap{
-    .quick_menu{
-      display: none;
-    }
     header{
       .header_top{
         display: none;
@@ -604,7 +671,7 @@ footer{
         border-bottom: 1px solid $borderLine;
         #gnb{
           .logo{
-            // top: 7px;
+            top: 13px;
             img{
               width: 100px;
             }
@@ -620,13 +687,45 @@ footer{
               height: 25px;
             }
             .search_button{
-              background-image: url('../img/ico-search.png')
+              background-image: url('../img/ico-search.png');
+              &.on{
+                background-color: transparent;
+              }
             }
             .all_menu_button{
               background-image: url('../img/ico-menu-white.png')
             }
           }
         }
+      }
+      .search_wrap{
+        .inner{
+          width: auto;
+          padding: 30px 20px;
+        }
+        .search{
+          form{
+            input{
+              padding: 0 10px;
+              height: 36px;
+              line-height: 36px;
+              font-size: $fontSmall;
+              border-width: 2px;
+              border-radius: 9px;
+            }
+            button{
+              flex: 0 0 36px;
+              width: 36px;
+              height: 36px;
+              background-size: 17px 17px;
+              border-radius: 13px;
+            }
+          }
+          .tag_list{
+            margin-top: 15px;
+          }
+        }
+        // search_bar end
       }
     }
     footer{
@@ -655,15 +754,11 @@ footer{
             border-bottom: 1px solid $borderLine;
           }
           .sns{
-            // justify-content: center;
             padding: 15px 0;
           }
         }
         .footer_txt{
           text-align: center;
-        }
-        .copyright{
-
         }
         // footer bottom end
       }
@@ -673,7 +768,19 @@ footer{
 
 // 864
 
-@media screen and ( max-width: 750px ){
+@media screen and ( max-width: 768px ){
+
+
+  #wrap header .header_bottom{
+    height: 52px;
+    #gnb .logo{
+      top: 7px;
+    }
+    &:after{
+      width: 134px;
+      height: 65px;
+    }
+  }
 
   footer .footer_bottom{
     .footer_img .certification{

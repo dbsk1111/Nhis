@@ -19,9 +19,10 @@ $(function(){
     console.log($(window).width())
 
     if( search_bar_open == 0 ){
-      if( $(window).width() > 991 ){
-        $(this).addClass('on')
-      }
+      // if( $(window).width() > 991 ){
+      //   $(this).addClass('on')
+      // }
+      $(this).addClass('on')
       $('.search_wrap').addClass('on')
       $('header').addClass('on')
       search_bar_open = 1;

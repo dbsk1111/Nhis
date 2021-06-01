@@ -102,9 +102,13 @@
 .tag_list{
   margin-top: 30px;
   a{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
     display: inline-block;
-    margin-left: 5px;
+    margin: 8px 5px 0 0;
     padding: 0 12px;
+    max-width: 140px;
     height: 40px;
     line-height: 40px;
     color: $linklight;
@@ -113,9 +117,6 @@
     border: 1px solid transparent;
     border-radius: 8px;
     box-sizing: border-box;
-    &:first-child{
-      margin-left: 0;
-    }
     &:hover{
       background: transparent;
       border: 1px solid $bgColor;
