@@ -34,12 +34,12 @@
           font-size: $titleMid;
           font-weight: 700;
         }
-        ul{
+        & > ul{
           padding-top: 10px;
           border-top: 1px solid $borderLineDark;
-          li{
+          & > li{
             border-bottom: 1px solid $borderLine;
-            a{
+            & > a{
               display: block;
               position: relative;
               height: 41px;
@@ -49,6 +49,12 @@
               &.on{
                 color: $red;
                 font-weight: 700;
+              }
+              ul{
+
+                li{
+
+                }
               }
             }
           }
@@ -62,11 +68,10 @@
             font-size: $change15;
           }
           & > ul{
-
             & > li{
               padding: 20px 0;
               border-top: 1px solid $borderLine;
-              input{
+              input[type=radio]{
                 display: none;
               }
               .survey_title{
@@ -126,10 +131,30 @@
                     input[type=radio]:checked + label span:before{
                       border: 6px solid $borderLineDark;
                     }
-
-
-
-
+                  }
+                }
+                .input_text{
+                  height: 48px;
+                  input{
+                    height: 100%;
+                    border-radius: 5px;
+                    box-sizing: border-box;
+                    &[type=text]{
+                      margin-right: 11px;
+                      padding: 0 12px;
+                      max-width: 600px;
+                      width: calc(100% - 92px);
+                      border: 2px solid $borderLine;
+                    }
+                    &[type=submit]{
+                      width: 80px;
+                      color: $fontWhite;
+                      background: $gbtnColor;
+                      border: none;
+                      &:hover{
+                        background: $gbtnColorHover;
+                      }
+                    }
                   }
                 }
               }

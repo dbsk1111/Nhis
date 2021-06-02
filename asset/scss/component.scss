@@ -16,6 +16,9 @@
   &.on:after{
     transform: translateY( -50% ) rotate( 180deg );
   }
+  .dropdown_allow.red:after{
+    background-image: url('../img/arrow-navy.png')
+  }
 }
 
 .quick_menu{
@@ -24,6 +27,7 @@
   right: 0;
   width: 40px;
   transform: translateY( -50% );
+  z-index: 1;
   ul{
     li{
       margin-top: 1px;

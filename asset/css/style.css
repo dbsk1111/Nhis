@@ -73,12 +73,17 @@ button {
   transform: translateY(-50%) rotate(180deg);
 }
 
+.dropdown_allow .dropdown_allow.red:after {
+  background-image: url("../img/arrow-navy.png");
+}
+
 .quick_menu {
   position: fixed;
   top: 50%;
   right: 0;
   width: 40px;
   transform: translateY(-50%);
+  z-index: 1;
 }
 
 .quick_menu ul li {
@@ -1161,16 +1166,16 @@ footer .footer_bottom .ftxt * {
   font-weight: 700;
 }
 
-#wrap .container .inner .snb ul {
+#wrap .container .inner .snb > ul {
   padding-top: 10px;
   border-top: 1px solid #666779;
 }
 
-#wrap .container .inner .snb ul li {
+#wrap .container .inner .snb > ul > li {
   border-bottom: 1px solid #e1e3e6;
 }
 
-#wrap .container .inner .snb ul li a {
+#wrap .container .inner .snb > ul > li > a {
   display: block;
   position: relative;
   height: 41px;
@@ -1179,7 +1184,7 @@ footer .footer_bottom .ftxt * {
   letter-spacing: -0.5px;
 }
 
-#wrap .container .inner .snb ul li a.on {
+#wrap .container .inner .snb > ul > li > a.on {
   color: #ee0700;
   font-weight: 700;
 }
@@ -1201,7 +1206,7 @@ footer .footer_bottom .ftxt * {
   border-top: 1px solid #e1e3e6;
 }
 
-#wrap .container .inner .content .survey > ul > li input {
+#wrap .container .inner .content .survey > ul > li input[type=radio] {
   display: none;
 }
 
@@ -1275,4 +1280,33 @@ footer .footer_bottom .ftxt * {
 
 #wrap .container .inner .content .survey > ul > li .survey_content .survey_score li input[type=radio]:checked + label span:before {
   border: 6px solid #666779;
+}
+
+#wrap .container .inner .content .survey > ul > li .survey_content .input_text {
+  height: 48px;
+}
+
+#wrap .container .inner .content .survey > ul > li .survey_content .input_text input {
+  height: 100%;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+#wrap .container .inner .content .survey > ul > li .survey_content .input_text input[type=text] {
+  margin-right: 11px;
+  padding: 0 12px;
+  max-width: 600px;
+  width: calc(100% - 92px);
+  border: 2px solid #e1e3e6;
+}
+
+#wrap .container .inner .content .survey > ul > li .survey_content .input_text input[type=submit] {
+  width: 80px;
+  color: #fff;
+  background: #44465c;
+  border: none;
+}
+
+#wrap .container .inner .content .survey > ul > li .survey_content .input_text input[type=submit]:hover {
+  background: #333340;
 }
