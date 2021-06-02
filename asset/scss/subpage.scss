@@ -49,10 +49,16 @@
               &.on{
                 color: $red;
                 font-weight: 700;
+                & + ul{
+                  display: block;
+                }
               }
               &.dropdown_allow + ul{
                 display: none;
                 padding-bottom: 10px;
+                &.on{
+                  display: block;
+                }
                 li{
                   a{
                     display: block;
@@ -62,10 +68,26 @@
                     &:before{
                       content: '';
                       display: inline-block;
+                      position: relative;
+                      top: -4px;
                       width: 6px;
                       height: 2px;
                       background: $borderLine;
-                      padding: 0 5px;
+                      margin: 0 5px;
+                    }
+                    &:hover{
+                      color: $fontWhite;
+                      background: $bgColorDark;
+                    }
+                    &:hover:before{
+                      background: $bgWhite;
+                    }
+                    &.on{
+                      color: $fontWhite;
+                      background: $red;
+                      &:before{
+                        background: $bgWhite;
+                      }
                     }
                   }
                 }

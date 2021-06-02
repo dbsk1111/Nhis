@@ -1194,9 +1194,17 @@ footer .footer_bottom .ftxt * {
   font-weight: 700;
 }
 
+#wrap .container .inner .snb > ul > li > a.on + ul {
+  display: block;
+}
+
 #wrap .container .inner .snb > ul > li > a.dropdown_allow + ul {
   display: none;
   padding-bottom: 10px;
+}
+
+#wrap .container .inner .snb > ul > li > a.dropdown_allow + ul.on {
+  display: block;
 }
 
 #wrap .container .inner .snb > ul > li > a.dropdown_allow + ul li a {
@@ -1209,10 +1217,30 @@ footer .footer_bottom .ftxt * {
 #wrap .container .inner .snb > ul > li > a.dropdown_allow + ul li a:before {
   content: '';
   display: inline-block;
+  position: relative;
+  top: -4px;
   width: 6px;
   height: 2px;
   background: #e1e3e6;
-  padding: 0 5px;
+  margin: 0 5px;
+}
+
+#wrap .container .inner .snb > ul > li > a.dropdown_allow + ul li a:hover {
+  color: #fff;
+  background: #44465c;
+}
+
+#wrap .container .inner .snb > ul > li > a.dropdown_allow + ul li a:hover:before {
+  background: #fff;
+}
+
+#wrap .container .inner .snb > ul > li > a.dropdown_allow + ul li a.on {
+  color: #fff;
+  background: #ee0700;
+}
+
+#wrap .container .inner .snb > ul > li > a.dropdown_allow + ul li a.on:before {
+  background: #fff;
 }
 
 #wrap .container .inner .content {
