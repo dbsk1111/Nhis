@@ -1224,15 +1224,55 @@ footer .footer_bottom .ftxt * {
   line-height: 32px;
 }
 
+#wrap .container .inner .content .survey > ul > li .survey_content a {
+  margin-left: 40px;
+}
+
+#wrap .container .inner .content .survey > ul > li .survey_content a:first-child {
+  margin-left: 0;
+}
+
 #wrap .container .inner .content .survey > ul > li .survey_content a img {
+  margin-right: 7px;
   vertical-align: sub;
 }
 
-#wrap .container .inner .content .survey > ul > li .survey_content ul {
+#wrap .container .inner .content .survey > ul > li .survey_content .survey_score {
   display: flex;
+  margin: 10px 0 20px;
 }
 
-#wrap .container .inner .content .survey > ul > li .survey_content ul li label {
+#wrap .container .inner .content .survey > ul > li .survey_content .survey_score li {
+  margin-left: 40px;
+}
+
+#wrap .container .inner .content .survey > ul > li .survey_content .survey_score li:first-child {
+  margin-left: 0;
+}
+
+#wrap .container .inner .content .survey > ul > li .survey_content .survey_score li label {
   display: flex;
   align-items: center;
+  cursor: pointer;
+}
+
+#wrap .container .inner .content .survey > ul > li .survey_content .survey_score li label span {
+  position: relative;
+}
+
+#wrap .container .inner .content .survey > ul > li .survey_content .survey_score li label span:before {
+  content: '';
+  display: inline-block;
+  position: relative;
+  margin: 0 10px;
+  top: 6px;
+  width: 20px;
+  height: 20px;
+  border: 1px solid #e1e3e6;
+  border-radius: 50%;
+  box-sizing: border-box;
+}
+
+#wrap .container .inner .content .survey > ul > li .survey_content .survey_score li input[type=radio]:checked + label span:before {
+  border: 6px solid #666779;
 }
