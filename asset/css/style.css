@@ -73,8 +73,13 @@ button {
   transform: translateY(-50%) rotate(180deg);
 }
 
-.dropdown_allow .dropdown_allow.red:after {
-  background-image: url("../img/arrow-navy.png");
+.dropdown_allow.red:after {
+  background-image: url("../img/arrow-gray.png");
+}
+
+.dropdown_allow.red.on:after {
+  background-image: url("../img/arrow-red-on.png");
+  transform: translateY(-50%);
 }
 
 .quick_menu {
