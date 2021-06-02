@@ -138,11 +138,12 @@
                 }
                 .survey_score{
                   display: flex;
+                  flex-wrap: wrap;
                   margin: 10px 0 20px;
                   li{
-                    margin-left: 40px;
+                    margin-right: 40px;
                     &:first-child{
-                      margin-left: 0;
+                      margin-right: 0;
                     }
                     label{
                       display: flex;
@@ -179,7 +180,7 @@
                       margin-right: 11px;
                       padding: 0 12px;
                       max-width: 600px;
-                      width: calc(100% - 92px);
+                      width: calc(100% - 95px);
                       border: 2px solid $borderLine;
                     }
                     &[type=submit]{
@@ -199,5 +200,39 @@
         }
       }
     }
+  }
+}
+
+@media screen and ( max-width: 1180px ){
+
+  #wrap .container .inner .content .survey > ul > li .survey_content .survey_score li{
+    margin-left: 2vw;
+  }
+  .survey_score img{
+    display: none;
+  }
+  #wrap .container .inner .content .survey > ul > li .survey_content{
+    width: calc( 100% - 110px );
+  }
+}
+
+@media screen and ( max-width: 991px ){
+  aside, .snb{
+    display: none;
+  }
+  #wrap .container .inner .content .survey > ul > li .survey_content .survey_score li label span:before{
+    margin-left: 0;
+  }
+  #wrap .container .inner .content .survey > ul > li .survey_content .survey_score li{
+    margin-left: 20px;
+  }
+}
+
+
+@media screen and ( max-width: 768px ){
+  #wrap .container .inner .content .survey > ul > li .survey_content{
+    display: block;
+    margin-top: 20px;
+    width: auto;
   }
 }
