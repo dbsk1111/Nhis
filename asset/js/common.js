@@ -85,7 +85,7 @@ $(function(){
       $(this).prev().toggleClass('on')
     }
 
-    
+    $(this).next('ul').toggle()
   })
 
   // 탑으로 버튼

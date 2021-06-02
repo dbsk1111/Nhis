@@ -1194,6 +1194,27 @@ footer .footer_bottom .ftxt * {
   font-weight: 700;
 }
 
+#wrap .container .inner .snb > ul > li > a.dropdown_allow + ul {
+  display: none;
+  padding-bottom: 10px;
+}
+
+#wrap .container .inner .snb > ul > li > a.dropdown_allow + ul li a {
+  display: block;
+  height: 34px;
+  line-height: 34px;
+  font-size: 15px;
+}
+
+#wrap .container .inner .snb > ul > li > a.dropdown_allow + ul li a:before {
+  content: '';
+  display: inline-block;
+  width: 6px;
+  height: 2px;
+  background: #e1e3e6;
+  padding: 0 5px;
+}
+
 #wrap .container .inner .content {
   flex: 1;
 }

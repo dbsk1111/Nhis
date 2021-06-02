@@ -50,10 +50,24 @@
                 color: $red;
                 font-weight: 700;
               }
-              ul{
-
+              &.dropdown_allow + ul{
+                display: none;
+                padding-bottom: 10px;
                 li{
-
+                  a{
+                    display: block;
+                    height: 34px;
+                    line-height: 34px;
+                    font-size: $change15;
+                    &:before{
+                      content: '';
+                      display: inline-block;
+                      width: 6px;
+                      height: 2px;
+                      background: $borderLine;
+                      padding: 0 5px;
+                    }
+                  }
                 }
               }
             }
