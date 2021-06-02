@@ -57,6 +57,7 @@
       .content{
         flex: 1;
         .survey{
+          margin-top: 80px;
           & *{
             font-size: $change15;
           }

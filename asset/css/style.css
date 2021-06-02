@@ -779,6 +779,10 @@ body.on {
   font-size: 15px;
 }
 
+#wrap .container {
+  padding-bottom: 120px;
+}
+
 footer {
   padding: 40px 0 90px;
   border-top: 1px solid #e1e3e6;
@@ -1182,6 +1186,10 @@ footer .footer_bottom .ftxt * {
 
 #wrap .container .inner .content {
   flex: 1;
+}
+
+#wrap .container .inner .content .survey {
+  margin-top: 80px;
 }
 
 #wrap .container .inner .content .survey * {
