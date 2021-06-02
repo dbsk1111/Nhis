@@ -57,15 +57,21 @@
       .content{
         flex: 1;
         .survey{
-          ul{
+          & *{
+            font-size: $change15;
+          }
+          & > ul{
 
-            li{
-
+            & > li{
+              padding: 20px 0;
+              border-top: 1px solid $borderLine;
               input{
                 display: none;
               }
               .survey_title{
                 display: inline-block;
+                vertical-align: top;
+                margin-right: 30px;
                 width: 76px;
                 height: 32px;
                 line-height: 32px;
@@ -77,6 +83,12 @@
               }
               .survey_content{
                 display: inline-block;
+                line-height: 32px;
+                a{
+                  img{
+                    vertical-align: sub;
+                  }
+                }
                 ul{
                   display: flex;
                   li{

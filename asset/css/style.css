@@ -1184,12 +1184,23 @@ footer .footer_bottom .ftxt * {
   flex: 1;
 }
 
-#wrap .container .inner .content .survey ul li input {
+#wrap .container .inner .content .survey * {
+  font-size: 15px;
+}
+
+#wrap .container .inner .content .survey > ul > li {
+  padding: 20px 0;
+  border-top: 1px solid #e1e3e6;
+}
+
+#wrap .container .inner .content .survey > ul > li input {
   display: none;
 }
 
-#wrap .container .inner .content .survey ul li .survey_title {
+#wrap .container .inner .content .survey > ul > li .survey_title {
   display: inline-block;
+  vertical-align: top;
+  margin-right: 30px;
   width: 76px;
   height: 32px;
   line-height: 32px;
@@ -1200,15 +1211,20 @@ footer .footer_bottom .ftxt * {
   border-radius: 10px 10px 10px 0;
 }
 
-#wrap .container .inner .content .survey ul li .survey_content {
+#wrap .container .inner .content .survey > ul > li .survey_content {
   display: inline-block;
+  line-height: 32px;
 }
 
-#wrap .container .inner .content .survey ul li .survey_content ul {
+#wrap .container .inner .content .survey > ul > li .survey_content a img {
+  vertical-align: sub;
+}
+
+#wrap .container .inner .content .survey > ul > li .survey_content ul {
   display: flex;
 }
 
-#wrap .container .inner .content .survey ul li .survey_content ul li label {
+#wrap .container .inner .content .survey > ul > li .survey_content ul li label {
   display: flex;
   align-items: center;
 }
