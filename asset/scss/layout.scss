@@ -31,6 +31,7 @@ body.on{
     max-width: 1180px;
     width: 90%;
     background: $bgWhite;
+    box-shadow: 0 0 3px $black;
     .all_menu_button{
       display: flex;
       justify-content: center;
@@ -57,6 +58,7 @@ body.on{
       align-items: center;
       padding-right: 60px;
       height: 48px;
+      font-size: $change15;
       border-bottom: 1px solid $borderLine;
       li{
         margin-left: 15px;
@@ -79,14 +81,20 @@ body.on{
           padding-top: 30px;
           li{
             display: block;
-            padding: 0 30px;
             color: #3a3a4a;
             font-size: 16px;
             line-height: 42px;
             cursor: pointer;
-            &.on{
-              color: $fontWhite;
-              background: $red;
+            a{
+              display: block;
+              width: 100%;
+              height: 100%;
+              padding: 0 30px;
+              box-sizing: border-box;
+              &.on, &:hover{
+                color: $fontWhite;
+                background: $red;
+              }
             }
           }
         }
@@ -97,6 +105,62 @@ body.on{
         height: 700px;
         padding: 30px 60px;
         box-sizing: border-box;
+        .menu_right_list{
+          &.hide{
+            display: none;
+          }
+          .menu_list{
+
+            & + .menu_list{
+              margin-top: 45px;
+            }
+            .menu_list_title{
+              margin-bottom: 15px;
+              font-weight: 700;
+            }
+            & > ul{
+              border-top: 2px solid $borderLineDark;
+              border-bottom: 1px solid $borderLine;
+              & > li{
+                display: flex;
+                padding: 16px 0;
+                border-bottom: 1px solid $borderLine;
+                &:last-child{
+                  border-bottom: none;
+                }
+                & a{
+                  color: $linklight;
+                  font-size: $change15;
+                }
+                & > a{
+                  flex: 0 0 170px;
+                }
+                & > ul{
+                  flex: 1 auto;
+                  display: flex;
+                  flex-wrap: wrap;
+                  li{
+                    position: relative;
+                    flex: 1 50%;
+                    text-indent: 12px;
+                    &:before{
+                      content: '';
+                      display: block;
+                      position:absolute;
+                      top: 50%;
+                      left: 0;
+                      width: 3px;
+                      height: 3px;
+                      border-radius: 50%;
+                      background: $linklight;
+                      transform: translateY( -50% );
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
       }
     }
   }
@@ -127,6 +191,7 @@ body.on{
       background: $bgWhite;
     }
     .header_top{
+      padding-bottom: 72px;
       height: 46px;
       #lnb{
         // overflow: hidden;
@@ -249,10 +314,12 @@ body.on{
       }
     }
     .header_bottom{
-      position: relative;
+      position: absolute;
+      top: 46px;
+      width: 100%;
       height: 72px;
       box-sizing: border-box;
-      z-index: 1;
+      z-index: 2;
       &.on{
         height: auto;
         border-bottom: 1px solid $borderLineDark;
@@ -358,7 +425,7 @@ body.on{
           .search_button{
             background-image: url('../img/ico-search-navy.png');
             &.on{
-              background: $bgColorDark url('../img/ico-close.png') no-repeat center;
+              background-image: url('../img/ico-close-dark.png');
             }
           }
           .all_menu_button{
@@ -426,6 +493,7 @@ body.on{
       border-top: 1px solid $borderLine;
       border-bottom: 1px solid $borderLineDark;
       box-shadow: 0 6px 6px rgba(0,0,0,0.15);
+      z-index: 1;
       &.on{
         display: block;
       }
@@ -555,6 +623,7 @@ footer{
     flex-direction: row-reverse;
     justify-content: space-between;
     margin-top: 45px;
+    word-break: keep-all;
     .footer_img{
       a:not(:first-child){
         margin-left: 8px;
@@ -657,6 +726,8 @@ footer{
         display: none;
       }
       .header_bottom{
+        position: relative;
+        top: 0;
         &:after{
           content: '';
           position: absolute;
@@ -689,7 +760,7 @@ footer{
             .search_button{
               background-image: url('../img/ico-search.png');
               &.on{
-                background-color: transparent;
+                background-image: url('../img/ico-close.png');
               }
             }
             .all_menu_button{
@@ -699,6 +770,7 @@ footer{
         }
       }
       .search_wrap{
+        border-top: 0;
         .inner{
           width: auto;
           padding: 30px 20px;
@@ -804,17 +876,21 @@ footer{
 
 
 @media screen and ( max-width: 530px ){
-  footer .footer_top .footer_link{
-    flex-direction: column;
-    width: 100%;
-    .family_site{
-      width: auto;
-      &:not(:first-child){
-        margin: 8px 0 0;
+  footer .footer_top{
+    .footer_nav ul li{
+      margin-left: 3.77vw;
+    }
+    .footer_link{
+      flex-direction: column;
+      width: 100%;
+      .family_site{
+        width: auto;
+        &:not(:first-child){
+          margin: 8px 0 0;
+        }
       }
     }
   }
-
 }
 
 // 767px

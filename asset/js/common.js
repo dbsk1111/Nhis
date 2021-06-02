@@ -55,6 +55,18 @@ $(function(){
     $('body').toggleClass('on')
   })
 
+  // 모든 메뉴 탭
+  $('.menu_left a').click(function(){
+    // 왼쪽 메뉴 활성화
+    $('.menu_left a').removeClass('on')
+    $(this).addClass('on')
+
+    $('.menu_right .menu_right_list').addClass('hide')
+    $(this.hash).removeClass('hide')
+
+    return false;
+  })
+
 
   // 드롭다운 얼로우 클릭 시 윈도우 노출
   $('.dropdown_allow').click(function(){

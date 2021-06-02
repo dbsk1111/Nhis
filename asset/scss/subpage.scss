@@ -1,489 +1,96 @@
-#wrap.sub_page{
-  background: blue;
-  &:before, &:after{
-    content: '';
-    position: absolute;
-    top: 0;
-    width: 170px;
-    height: 400px;
-    background: no-repeat center;
-    z-index: -1;
-  }
-  &:before{
-    left: 0;
-    background-image: url('../img/bg_layout_l.png');
-  }
-  &:after{
-    top: 10px;
-    right: 0;
-    background-image: url('../img/bg_layout_r.png');
-  }
-  header{
-    // position: relative;
-    &.on{
-      background: $bgWhite;
-    }
-    .header_top{
-      height: 46px;
-      #lnb{
-        // overflow: hidden;
-        font-size: $fontSmall;
-        line-height: 46px;
-        .zoom, .sound{
-          float: left;
-          span:first-child{
-            margin-right: 4px;
-          }
-          img{
-            vertical-align: middle;
-            transform: translateY( -1px );
-          }
-        }
-        .sound{
-          margin-left: 20px;
-        }
-        .lnb_menu{
-          float: right;
-          & > ul > li{
-            float: left;
-            position: relative;
-            margin-left: 20px;
-            padding-left: 20px;
-            a{
-              color: $linklight;
-            }
-            &:before{
-              content: '';
-              position: absolute;
-              top: 16px;
-              left: 0;
-              width: 1px;
-              height: 14px;
-              background: #e1e1e1;
-            }
-            &:first-child{
-              margin-left: 0;
-              padding-left: 0;
-              &:before{
-                display: none;
-              }
-            }
-            &.part_web{
-              color: $darkRed;
-            }
-            .dropdown_allow{
-              padding-right: 15px;
-              &:after{
-                width: 6.5px;
-                right: 0px;
-              }
-            //   background-image: url('../img/arrow-navy-8x6.png');
-            }
-            .language_window{
-              top: 100%;
-              right: 0;
-              border-radius: 10px;
-              ul{
-                line-height: 33px;
-              }
-            }
-            .part_web_window{
-              top: 100%;
-              right: 0;
-              width: 360px;
-              border-radius: 10px;
-              ul{
-                display: flex;
-                flex-wrap: wrap;
-                li{
-                  display: inline-block;
-                  margin-bottom: 10px;
-                  padding: 5px 0;
-                  width: calc( 100% / 3 );
-                  text-align: center;
-                  line-height: 1;
-                  &:nth-child(1) a img{
-                    background: #f16669;
-                  }
-                  &:nth-child(2) a img{
-                    background: #bf9d83;
-                  }
-                  &:nth-child(3) a img{
-                    background: #4cc771;
-                  }
-                  &:nth-child(4) a img{
-                    background: #658dd0;
-                  }
-                  &:nth-child(5) a img{
-                    background: #58606b;
-                  }
-                  &:nth-child(6) a img{
-                    background: #9385dd;
-                  }
-                  a{
-                    display: block;
-                    line-height: 1.2;
-                    img{
-                      width: 56px;
-                      height: 56px;
-                      margin: 0 auto 5px;
-                      object-fit: none;
-                      border-radius: 20px;
-                    }
-                    // <li><a href="#" class="insurance">노인장기<br>요양보험</a></li>
-                    // <li><a href="#" class="information">요양기관<br>정보마당</a></li>
-                    // <li><a href="#" class="edi">EDI<br>서비스</a></li>
-                    // <li><a href="#" class="checkup">건강검진<br>기관포털</a></li>
-                    // <li><a href="#" class="sharing">건강보험자료<br>공유서비스</a></li>
-                  }
-                }
-              }
-            }
-            // list 끝
-          }
-        }
-        // lnb 영역 끝
-      }
-    }
-    .header_bottom{
-      position: relative;
-      height: 72px;
-      box-sizing: border-box;
-      z-index: 1;
-      &.on{
-        height: auto;
-        border-bottom: 1px solid $borderLineDark;
-        background: $bgWhite;
-      }
-      #gnb{
-        display: flex;
-        justify-content: space-between;
-        align-items: flex-start;
-        // align-items: center;
-        height: 100%;
-        .logo{
-          position: relative;
-          top: 8.5px;
-          a{
-            img{
-              display: block;
-              vertical-align: middle;
-            }
-          }
-          // 로고 끝
-        }
-        #gnb_menu{
-          flex: 1 1 auto;
-          & > ul{
-            display: flex;
-            justify-content: flex-end;
-            position: relative;
-            & > li{
-              // float: left;
-              max-width: 160px;
-              min-width: 138px;
-              width: 100%;
-              padding-top: 21px;
-              // height: 55px;
-              // line-height: 72px;
-              // &:hover a ~ ul.gnb_submenu{
-                // display: block;
-              // }
-              &:hover > a ~ ul{
-                background: $bgColor;
-              }
-              & > a{
-                position: relative;
-                margin-left: 17px;
-                color: $gnbColor;
-                font-size: $titleSmall;
-                font-weight: 700;
-                font-family: 'Noto Sans KR', sans-serif;
-                // line-height: 1;
-                // line-height: 72px;
-                &:hover{
-                  color: $red;
-                  &:before{
-                    content: '';
-                    position: absolute;
-                    bottom: -4px;
-                    width: 100%;
-                    height: 2px;
-                    background: $red;
-                  }
-                }
-              }
-              .gnb_submenu{
-                display: none;
-                margin-top: 20px;
-                padding: 21px 15px 21px 17px;
-                height: 266px;
-                li{
-                  line-height: 1.5;
-                  padding: 4px 0;
-                  a{
-                    color: $gnbColor;
-                    font-size: $change15;
-                    letter-spacing: -0.5px;
-                    &:hover{
-                      color: $red;
-                      text-decoration: underline;
-                    }
-                  }
-                }
-              }
-            }
-          }
-          // gnb 메뉴 끝
-        }
-        .support{
+#wrap{
+  .container{
+    .inner{
+      display: flex;
+      flex-wrap: wrap;
+      aside{
+        flex: 1 100%;
+        margin: 20px 0 27px;
+        ul{
           display: flex;
-          flex: 0 1 117px;
-          flex-direction: row;
           justify-content: flex-end;
-          position: relative;
-          top: 16px;
-          .search_button, .all_menu_button{
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            width: 40px;
-            height: 40px;
-            cursor: pointer;
-          }
-          .search_button{
-            background: url('../img/ico-search-navy.png') no-repeat center;
-            &.on{
-              background: $bgColorDark url('../img/ico-close.png') no-repeat center;
+          li{
+            &:not(:first-child){
+              margin-left: 9px;
+              padding-left: 15px;
+              background: url('../img/arrow-location.png') no-repeat left center;
+            }
+            a{
+              font-size: $fontSmall;
+              img{
+                vertical-align: sub;
+              }
             }
           }
-          .all_menu_button{
-            margin-left: 10px;
-          }
-        }
-      // gnb 영역 끝
-      }
-      &.on{
-        &:before, &:after{
-          content: '';
-          position: absolute;
-          width: 100%;
-          height: 1px;
-          background: $borderLine;
-        }
-        &:before{
-          top: 72px;
-        }
-        &:after{
-          bottom: 58px;
-        }
-        #gnb #gnb_menu > ul{
-          &:before{
-            content: '';
-            position: absolute;
-            width: 130px;
-            height: 134px;
-            top: 140px;
-            left: -86px;
-            background: url('../img/gnb-visual.png') no-repeat;
-          }
-          & > li .gnb_submenu{
-            display: block;
-          }
         }
       }
-      .favorite_menu{
-        display: none;
-        text-align: center;
-        span{
-          color: $gnbColor;
+      .snb{
+        flex: 0 0 220px;
+        margin-right: 60px;
+        .snb_title{
+          margin-bottom: 41px;
+          color: $link;
+          font-family: 'Noto Sans KR', sans-serif;
+          font-size: $titleMid;
           font-weight: 700;
         }
-        a{
-          color: $gnbColor;
-          margin-left: 32px;
-          height: 58px;
-          line-height: 58px;
-        }
-      }
-      &.on .favorite_menu{
-        display: block;
-      }
-      // header_bottom
-    }
-    .search_wrap{
-      display: none;
-      position: absolute;
-      // top: 100%;
-      top: 118px;
-      width: 100%;
-      background: $bgWhite;
-      border-top: 1px solid $borderLine;
-      border-bottom: 1px solid $borderLineDark;
-      &.on{
-        display: block;
-      }
-      .inner{
-        width: 660px;
-        padding: 44px 20px;
-        box-sizing: border-box;
-      }
-      .search{
-        // width: 50%;
-        form{
-          display: flex;
-          justify-content: space-between;
-          input{
-            flex: 1 auto;
-            margin-right: 20px;
-            padding: 0 20px;
-            width: 100%;
-            height: 60px;
-            line-height: 57px;
-            color: #6c6d72;
-            font-size: 18px;
-            border: 3px solid $red;
-            border-radius: 13px;
-            box-sizing: border-box;
-          }
-          button{
-            flex: 0 0 60px;
-            top: 0;
-            right: 0;
-            width: 60px;
-            height: 60px;
-            text-indent: -9999px;
-            background: $red url('../img/ico-search.png') no-repeat center;
-            border-radius: 20px;
-            box-shadow: 0 7px 15px 0 #ffa590;
+        ul{
+          padding-top: 10px;
+          border-top: 1px solid $borderLineDark;
+          li{
+            border-bottom: 1px solid $borderLine;
+            a{
+              display: block;
+              position: relative;
+              height: 41px;
+              line-height: 41px;
+              font-size: $change15;
+              letter-spacing: -0.5px;
+              &.on{
+                color: $red;
+                font-weight: 700;
+              }
+            }
           }
         }
       }
-      .search_close{
-        display: none;
-      }
-      // search_bar end
-    }
-  }
-}
+      .content{
+        flex: 1;
+        .survey{
+          ul{
 
-footer{
-  padding: 40px 0 77px;
-  border-top: 1px solid $borderLine;
-  & *{
-    font-size: $fontSmall;
-  }
-  background: $bgColor;
-  address{
-    font-style: normal;
-  }
-  .footer_top{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    .footer_nav{
-      ul{
-        display: flex;
-        li{
-          margin-right: 20px;
-          &:last-child{
-            margin-right: 0;
+            li{
+
+              input{
+                display: none;
+              }
+              .survey_title{
+                display: inline-block;
+                width: 76px;
+                height: 32px;
+                line-height: 32px;
+                text-align: center;
+                color: $fontWhite;
+                font-size: $fontSmall;
+                background-color: $borderLineDark;
+                border-radius: 10px 10px 10px 0;
+              }
+              .survey_content{
+                display: inline-block;
+                ul{
+                  display: flex;
+                  li{
+                    label{
+                      display: flex;
+                      align-items: center;
+                    }
+                  }
+                }
+              }
+            }
           }
         }
       }
     }
-    .footer_link{
-      display: flex;
-      cursor: pointer;
-      .family_window{
-        overflow-x: hidden;
-        bottom: 120%;
-        width: 243px;
-        max-height: 362px;
-      }
-      .family_site{
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        width: 244px;
-        height: 40px;
-        background: $bgWhite;
-        border-radius: 5px;
-        &:not(:first-child){
-          margin-left: 12px;
-        }
-        .selet_box{
-          display: inline-block;
-          flex: 1 0 auto;
-          line-height: 40px;
-          padding-left: 20px;
-          color: $black;
-          // background-position: right 10px center;
-          &.dropdown_allow:after{
-            right: 20px;
-          }
-        }
-        .selet_button{
-          flex: 0 0 46px;
-          display: inline-block;
-          text-align: center;
-          line-height: 40px;
-          border-left: 1px solid $borderLine;
-        }
-      }
-    }
-    // 푸터 탑 끝
-  }
-  .footer_bottom{
-    display: flex;
-    flex-direction: row-reverse;
-    justify-content: space-between;
-    margin-top: 45px;
-    line-height: 26px;
-    .footer_img{
-      a:not(:first-child){
-        margin-left: 12px;
-      }
-      .certification{
-        position: relative;
-        top: -15px;
-      }
-      .sns{
-        display: flex;
-        justify-content: flex-end;
-        a{
-          display: flex;
-          width: 32px;
-          height: 32px;
-          background: $bgWhite;
-          border-radius: 100%;
-          &:hover{
-            background: $gnbColor;
-          }
-          img{
-            width: 100%;
-            height: 100%;
-            object-fit: none;
-          }
-        }
-      }
-    }
-    .ftxt{
-      display: flex;
-      justify-content: flex-end;
-      flex-direction: row-reverse;
-      & *{
-        display: inline-block;
-      }
-
-    }
-  }
-}
-
-
-@media screen and ( max-width: 991px ){
-  body{
-    background: skyblue;
-
   }
 }
