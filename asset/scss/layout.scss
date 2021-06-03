@@ -106,6 +106,8 @@ body.on{
         padding: 30px 60px;
         box-sizing: border-box;
         .menu_right_list{
+          // 원래는 모바일 메뉴를 만들어야 하지만 임시로 스크롤 처리하기 위해 width 700px 고정
+          width: 700px;
           &.hide{
             display: none;
           }
@@ -118,7 +120,7 @@ body.on{
               margin-bottom: 15px;
               font-weight: 700;
             }
-            & > ul{
+            .main_menu{
               border-top: 2px solid $borderLineDark;
               border-bottom: 1px solid $borderLine;
               & > li{
@@ -128,32 +130,32 @@ body.on{
                 &:last-child{
                   border-bottom: none;
                 }
-                & a{
+                a{
                   color: $linklight;
                   font-size: $change15;
                 }
                 & > a{
                   flex: 0 0 170px;
                 }
-                & > ul{
+                .sub_menu{
                   flex: 1 auto;
                   display: flex;
                   flex-wrap: wrap;
                   li{
                     position: relative;
                     flex: 1 50%;
-                    text-indent: 12px;
+                    padding-left: 12px;
+                    box-sizing: border-box;
                     &:before{
                       content: '';
                       display: block;
                       position:absolute;
-                      top: 50%;
+                      top: 9px;
                       left: 0;
                       width: 3px;
                       height: 3px;
                       border-radius: 50%;
                       background: $linklight;
-                      transform: translateY( -50% );
                     }
                   }
                 }

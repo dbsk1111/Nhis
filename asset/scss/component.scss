@@ -83,6 +83,31 @@
 .button{
   cursor: pointer;
 }
+.utililty.button{
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  background-color: $bgColor;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 16px;
+  &:hover{
+    background-color: $bgColorDark;
+  }
+}
+.print_button{
+  background-image: url('../img/ico-print.png');
+  &:hover{
+    background-image: url('../img/ico-print-on.png');
+  }
+}
+.share_button{
+  background-image: url('../img/ico-share.png');
+  &:hover{
+    background-image: url('../img/ico-share-on.png');
+  }
+}
+
 
 .window{
   display: none;
