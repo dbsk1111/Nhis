@@ -1,0 +1,23 @@
+:root {
+  --color: red;
+  --change15: 15px;
+  --change21: 21px;
+  --change28: 28px;
+  --change32: 32px;
+}
+
+@media (max-width: 991px) {
+  :root {
+    --color: green;
+    --change15: 14px;
+    --change21: 18px;
+    --change32: 24px;
+  }
+}
+
+@media (max-width: 768px) {
+  :root {
+    --color: blue;
+    --change32: 20px;
+  }
+}

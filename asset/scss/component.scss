@@ -79,11 +79,43 @@
 .point{
   color: $red;
 }
+.point_dark{
+  color: $darkRed;
+  text-decoration: underline;
+}
 
-.button{
+.pointer{
   cursor: pointer;
 }
-.utililty.button{
+
+.button{
+  display: inline-block;
+  padding: 0 16px;
+  color: $fontWhite;
+  font-size: var(--change15);
+  background: $gbtnColor;
+  border-radius: 4px;
+  height: 40px;
+  line-height: 40px;
+  box-sizing: border-box;
+  &:hover{
+    background: $gbtnColorHover;
+  }
+  &.light{
+    color: $fontColorBasic;
+    background: $bgWhite;
+    border: 1px solid $borderLineDark;
+    &:hover{
+      background: $gnbBgColor;
+    }
+  }
+}
+
+
+
+
+
+.utililty_button{
   display: inline-block;
   width: 40px;
   height: 40px;
@@ -124,7 +156,7 @@
   box-sizing: border-box;
   z-index: 5;
   a{
-    font-size: $change15;
+    font-size: var(--change15);
     line-height: 2;
   }
   &.on{
@@ -145,7 +177,7 @@
     height: 40px;
     line-height: 40px;
     color: $linklight;
-    font-size: $change15;
+    font-size: var(--change15);
     background: $bgColor;
     border: 1px solid transparent;
     border-radius: 8px;
@@ -153,6 +185,60 @@
     &:hover{
       background: transparent;
       border: 1px solid $bgColor;
+    }
+  }
+}
+
+
+.sub_page_banner{
+  display: flex;
+  align-items: center;
+  position: relative;
+  margin-bottom: 50px;
+  padding: 26px 30px;
+  // min-height: 95px;
+  font-size: var(--change15);
+  line-height: 24px;
+  background: $gnbBgColor;
+  border-radius: 10px 50px 10px 10px;
+  img{
+    margin-right: 20px;
+    object-fit: none;
+  }
+}
+
+.tab_menu{
+  margin-bottom: 40px;
+  ul{
+    display: flex;
+    li{
+      flex: 1;
+      overflow: hidden;
+      a{
+        display: block;
+        padding: 0 10px;
+        width: 100%;
+        height: 100%;
+        line-height: 48px;
+        text-align: center;
+        color: $linklight;
+        font-size: var( --change15);
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        border: 1px solid $borderLine;
+        box-sizing: border-box;
+        &:not(:first-child){
+          border-left: 0;
+        }
+        &:hover{
+          background: $gnbBgColor;
+        }
+        &.on{
+          color: $fontWhite;
+          background: $red;
+        }
+      }
     }
   }
 }

@@ -58,7 +58,7 @@ body.on{
       align-items: center;
       padding-right: 60px;
       height: 48px;
-      font-size: $change15;
+      font-size: var(--change15);
       border-bottom: 1px solid $borderLine;
       li{
         margin-left: 15px;
@@ -132,7 +132,7 @@ body.on{
                 }
                 a{
                   color: $linklight;
-                  font-size: $change15;
+                  font-size: var(--change15);
                 }
                 & > a{
                   flex: 0 0 170px;
@@ -395,7 +395,7 @@ body.on{
                   padding: 4px 0;
                   a{
                     color: $gnbColor;
-                    font-size: $change15;
+                    font-size: var(--change15);
                     letter-spacing: -0.5px;
                     &:hover{
                       color: $red;
@@ -550,6 +550,10 @@ body.on{
   }
   .container{
     padding-bottom: 120px;
+    .content{
+      // 모바일 사이즈일 때?
+      // padding: 25px 0 30px;
+    }
   }
 }
 
@@ -804,6 +808,9 @@ footer{
         }
         // search_bar end
       }
+    }
+    .content{
+      padding: 25px 0 30px;
     }
     footer{
       .footer_top{

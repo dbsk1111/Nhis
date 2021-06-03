@@ -16,8 +16,46 @@ $titleBig: 32px;
 
 // chage font
 $change15: 15px;
-$change28: 21px;
+$change21: 21px;
 $change28: 28px;
+$change32: 32px;
+
+:root {
+  --color: red;
+  --change15: 15px;
+  --change21: 21px;
+  --change28: 28px;
+  --change32: 32px;
+}
+
+@media (max-width: 991px) {
+  :root {
+    --color: green;
+    --change15: 14px;
+    --change21: 18px;
+    // --change28: 28px;
+    --change32: 24px;
+  }
+}
+
+@media (max-width: 768px) {
+  :root {
+    --color: blue;
+    // --change15: 15px;
+    // --change21: 21px;
+    // --change28: 28px;
+    --change32: 20px;
+  }
+}
+
+
+// h2{
+//   color: var(--color)!important;
+//   font-size: var(--chage32);
+// }
+body {
+  // background-color: var(--color);
+}
 
 
 // background color
