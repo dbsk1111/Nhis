@@ -29,24 +29,26 @@ html,body{
 }
 
 body{
-  color: $linklight;
+  color: $fontColorDarklight;
   font-family: 'NBG', sans-serif;
   line-height: 1.5;
 }
 
-html,body,ul,li,h1,h2,h3,h4,h5,h6{
-  margin: 0;
-  padding: 0;
-}
-
-li{
+ul > li{
   list-style: none;
+}
+ol > li{
+  margin-left: 20px;
+  margin-top: 7px;
+  &:not(:first-child){
+    // margin-bottom: 7px;
+  }
 }
 
 a{
   text-decoration: none;
   font-family: 'NBG', sans-serif;
-  color: $link;
+  color: $fontColorDark;
   // transition: .5s;
   &:hover{
     // color: $fontColorHover;

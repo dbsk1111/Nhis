@@ -16,8 +16,6 @@ $(function(){
   // 검색창 노출
   let search_bar_open = 0;
   $('.search_button').click(function(){
-    console.log($(window).width())
-
     if( search_bar_open == 0 ){
       // if( $(window).width() > 991 ){
       //   $(this).addClass('on')
@@ -36,7 +34,6 @@ $(function(){
     $('.header_bottom').removeClass('on')
   })
   $(window).resize(function(){
-    console.log($(window).width())
     if( $(this).width() < 991 ){
       $('.search_button').removeClass('on')
     }else{
@@ -86,6 +83,7 @@ $(function(){
     }
 
     $(this).next('ul').toggleClass('on')
+    return false;
   })
 
   // 탑으로 버튼

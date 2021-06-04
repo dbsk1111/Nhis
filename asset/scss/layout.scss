@@ -131,7 +131,7 @@ body.on{
                   border-bottom: none;
                 }
                 a{
-                  color: $linklight;
+                  color: $fontColorDarklight;
                   font-size: var(--change15);
                 }
                 & > a{
@@ -155,7 +155,7 @@ body.on{
                       width: 3px;
                       height: 3px;
                       border-radius: 50%;
-                      background: $linklight;
+                      background: $fontColorDarklight;
                     }
                   }
                 }
@@ -220,7 +220,7 @@ body.on{
             margin-left: 20px;
             padding-left: 20px;
             a{
-              color: $linklight;
+              color: $fontColorDarklight;
             }
             &:before{
               content: '';
@@ -549,6 +549,7 @@ body.on{
     }
   }
   .container{
+    // 값 너무 커서 재조정, 필요한 곳만 추가
     padding-bottom: 120px;
     .content{
       // 모바일 사이즈일 때?
@@ -809,8 +810,11 @@ footer{
         // search_bar end
       }
     }
-    .content{
-      padding: 25px 0 30px;
+    .container{
+      padding-bottom: 0;
+      .content{
+        padding: 25px 0 30px;
+      }
     }
     footer{
       .footer_top{

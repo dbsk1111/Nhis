@@ -53,13 +53,13 @@ body {
   line-height: 1.5;
 }
 
-html, body, ul, li, h1, h2, h3, h4, h5, h6 {
-  margin: 0;
-  padding: 0;
+ul > li {
+  list-style: none;
 }
 
-li {
-  list-style: none;
+ol > li {
+  margin-left: 20px;
+  margin-top: 7px;
 }
 
 a {
@@ -104,6 +104,10 @@ button {
 .dropdown_allow.red.on:after {
   background-image: url("../img/arrow-red-on.png");
   transform: translateY(-50%);
+}
+
+.hangul {
+  list-style: hangul;
 }
 
 .quick_menu {
@@ -166,6 +170,9 @@ button {
 
 .point_dark {
   color: #d7021b;
+}
+
+.underline {
   text-decoration: underline;
 }
 
@@ -197,6 +204,24 @@ button {
 
 .button.light:hover {
   background: #f6f6f6;
+}
+
+.button.small {
+  margin-top: 10px;
+  padding: 0 12px;
+  height: 32px;
+  line-height: 32px;
+}
+
+.blank:after {
+  content: '';
+  display: inline-block;
+  position: relative;
+  margin-left: 3px;
+  top: 1px;
+  width: 12px;
+  height: 12px;
+  background: url("../img/ico-link2.png") no-repeat center/cover;
 }
 
 .utililty_button {
@@ -281,7 +306,7 @@ button {
   display: flex;
   align-items: center;
   position: relative;
-  margin-bottom: 50px;
+  margin-bottom: 15px;
   padding: 26px 30px;
   font-size: var(--change15);
   line-height: 24px;
@@ -334,6 +359,116 @@ button {
 .tab_menu ul li a.on {
   color: #fff;
   background: #ee0700;
+}
+
+.bullet {
+  margin-top: 50px;
+  margin-bottom: 20px;
+  color: #3a3a4a;
+  font-size: var(--change21);
+  font-weight: 700;
+}
+
+.bullet img {
+  position: relative;
+  vertical-align: middle;
+  top: -1px;
+  margin-right: 8px;
+}
+
+.bullet.small {
+  font-size: 16px;
+  margin: 40px 0 15px;
+}
+
+.step {
+  position: relative;
+}
+
+.step:before {
+  content: '';
+  display: block;
+  position: absolute;
+  left: 50px;
+  top: 0;
+  width: 1px;
+  height: 100%;
+  background-color: #e1e3e6;
+  z-index: -1;
+}
+
+.step > li {
+  display: flex;
+}
+
+.step > li + li {
+  margin-top: 30px;
+}
+
+.step > li div:nth-child(1) {
+  margin-right: 30px;
+}
+
+.step > li div:nth-child(2) {
+  margin-top: 7px;
+  margin-right: 7px;
+}
+
+.step > li div:nth-child(3) {
+  margin-top: 7px;
+}
+
+.step > li div:nth-child(3) strong {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.number {
+  display: inline-block;
+  width: 23px;
+  height: 23px;
+  line-height: 25px;
+  text-align: center;
+  font-size: 13px;
+  color: #fff;
+  background: #44465c;
+  border-radius: 50px;
+}
+
+.margin_left_10 {
+  margin-left: 10px;
+}
+
+.list_style:not(:first-child) {
+  margin-top: 7px;
+}
+
+.list_style:before {
+  content: '';
+  position: relative;
+  display: inline-block;
+  margin-right: 7px;
+  width: 3px;
+  height: 3px;
+  background-color: #44465c;
+  border-radius: 7px;
+  bottom: 4px;
+  left: 0;
+}
+
+@media (max-width: 768px) {
+  .bullet {
+    margin-top: 40px;
+  }
+  .bullet img {
+    height: 14px;
+  }
+  .bullet + .bullet {
+    margin-top: 40px;
+  }
+  .bullet.small {
+    margin-top: 30px;
+  }
 }
 
 body.on {
@@ -1199,7 +1334,10 @@ footer .footer_bottom .ftxt * {
   #wrap header .search_wrap .search .tag_list {
     margin-top: 15px;
   }
-  #wrap .content {
+  #wrap .container {
+    padding-bottom: 0;
+  }
+  #wrap .container .content {
     padding: 25px 0 30px;
   }
   #wrap footer .footer_top {
@@ -1363,17 +1501,21 @@ footer .footer_bottom .ftxt * {
 }
 
 #wrap .container .inner .snb > ul > li > a.dropdown_allow + ul li a {
+  position: relative;
   display: block;
-  height: 34px;
+  padding-left: 20px;
+  min-height: 34px;
   line-height: 34px;
+  color: #666666;
   font-size: var(--change15);
 }
 
 #wrap .container .inner .snb > ul > li > a.dropdown_allow + ul li a:before {
   content: '';
   display: inline-block;
-  position: relative;
-  top: -4px;
+  position: absolute;
+  top: 15px;
+  left: 0;
   width: 6px;
   height: 2px;
   background: #e1e3e6;
@@ -1396,6 +1538,10 @@ footer .footer_bottom .ftxt * {
 
 #wrap .container .inner .snb > ul > li > a.dropdown_allow + ul li a.on:before {
   background: #fff;
+}
+
+#wrap .container .inner .snb > ul > li > a.dropdown_allow + ul li a.blank:hover:after {
+  background-image: url("../img/ico-link-wh.png");
 }
 
 #wrap .container .inner .content {
@@ -1428,8 +1574,12 @@ footer .footer_bottom .ftxt * {
   float: left;
 }
 
-#wrap .container .inner .content .content_title .utililty ul li:not(:first-child) {
-  margin-left: 12px;
+#wrap .container .inner .content .content_title .utililty ul li:not(:last-child) {
+  margin-right: 12px;
+}
+
+#wrap .container .inner .content > div {
+  font-size: var(--change15);
 }
 
 #wrap .container .inner .content .survey {
@@ -1561,12 +1711,21 @@ footer .footer_bottom .ftxt * {
   aside, .snb {
     display: none;
   }
+  .utililty ul li:first-child {
+    display: none;
+  }
   #wrap .container .inner .content .survey > ul > li .survey_content .survey_score li {
     margin-right: 20px;
   }
 }
 
 @media screen and (max-width: 768px) {
+  #wrap .container .inner .content .content_title {
+    margin-bottom: 30px;
+  }
+  #wrap .container .inner .content .content_title .utililty {
+    position: relative;
+  }
   #wrap .container .inner .content .survey > ul > li .survey_content {
     display: block;
     margin-top: 20px;
@@ -1639,8 +1798,7 @@ footer .footer_bottom .ftxt * {
 }
 
 .definition dl dd {
-  margin-left: 110px;
-  margin-bottom: 20px;
+  margin: 0 0 20px 110px;
   color: #3a3a4a;
   font-size: var(--change15);
 }
@@ -1649,34 +1807,38 @@ footer .footer_bottom .ftxt * {
   margin-bottom: 0;
 }
 
+.definition dl dd .button {
+  margin-top: 10px;
+}
+
 @media screen and (max-width: 768px) {
-  .workplace ul {
+  .choice ul {
     flex-wrap: wrap;
     flex-direction: row;
     margin: 0 10px;
   }
-  .workplace ul li {
+  .choice ul li {
     flex: 1 100%;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
     padding: 10px;
   }
-  .workplace ul li:not(:first-child) {
+  .choice ul li:not(:first-child) {
     border-left: none;
     border-top: 1px solid #e1e3e6;
   }
-  .workplace img, .sub_page_banner img {
+  .choice img, .sub_page_banner img {
     display: none;
   }
-  dl {
+  .definition dl {
     padding: 15px 12px;
   }
-  dl dt {
+  .definition dl dt {
     position: relative;
     margin-bottom: 10px;
   }
-  dl dd {
+  .definition dl dd {
     margin-left: 0;
   }
 }

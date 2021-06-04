@@ -34,7 +34,7 @@
         margin-right: 60px;
         .snb_title{
           margin-bottom: 41px;
-          color: $link;
+          color: $fontColorDark;
           font-family: 'Noto Sans KR', sans-serif;
           font-size: $titleMid;
           font-weight: 700;
@@ -66,15 +66,19 @@
                 }
                 li{
                   a{
+                    position: relative;
                     display: block;
-                    height: 34px;
+                    padding-left: 20px;
+                    min-height: 34px;
                     line-height: 34px;
+                    color: $fontColorBasic;
                     font-size: var(--change15);
                     &:before{
                       content: '';
                       display: inline-block;
-                      position: relative;
-                      top: -4px;
+                      position: absolute;
+                      top: 15px;
+                      left: 0;
                       width: 6px;
                       height: 2px;
                       background: $borderLine;
@@ -94,6 +98,9 @@
                         background: $bgWhite;
                       }
                     }
+                    &.blank:hover:after{
+                      background-image: url('../img/ico-link-wh.png');
+                    }
                   }
                 }
               }
@@ -107,7 +114,7 @@
           position: relative;
           margin-bottom: 40px;
           h2{
-            color: $link;
+            color: $fontColorDark;
             // font-size: $change32;
             font-size: var(--change32);
             font-family: 'Noto Sans KR', sans-serif;
@@ -121,13 +128,16 @@
               overflow: hidden;
               li{
                 float: left;
-                &:not(:first-child){
-                  margin-left: 12px;
+                &:not(:last-child){
+                  margin-right: 12px;
                 }
               }
             }
           }
           // 컨텐트 타이틀 끝
+        }
+        & > div{
+          font-size: var(--change15);
         }
         .survey{
           margin-top: 80px;
@@ -254,6 +264,9 @@
   aside, .snb{
     display: none;
   }
+  .utililty ul li:first-child{
+    display: none;
+  }
 
   #wrap .container .inner .content .survey > ul > li .survey_content .survey_score li{
     margin-right: 20px;
@@ -262,9 +275,17 @@
 
 
 @media screen and ( max-width: 768px ){
-  #wrap .container .inner .content .survey > ul > li .survey_content{
-    display: block;
-    margin-top: 20px;
-    width: auto;
+  #wrap .container .inner .content{
+    .content_title{
+      margin-bottom: 30px;
+      .utililty{
+        position: relative;
+      }
+    }
+    .survey > ul > li .survey_content{
+      display: block;
+      margin-top: 20px;
+      width: auto;
+    }
   }
 }

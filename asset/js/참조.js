@@ -1822,7 +1822,7 @@ function alertFlashMap() {
 
 function bindExportPdfButton() {
   if ($("#pdfDown").length > 0) {
-    var a = $('<form method="post" name="pdfForm" action="' + CMS.ctx + '/cms/plugin/pdf/pdfOpen.do" target="_blank"><input type="hidden" name="siteId" value="' + _siteId + '"/><input type="hidden" name="locale" value="' + locale + '"/><input type="hidden" name="url" value="' + location.pathname + '"/><input type="hidden" name="href" value="' + location.href + '"/></form>');
+    var a = $('<form method="post" name="pdfForm" action="' + CMS.ctx + '/cms/plugin/pdf/pdfOpen.do" target="_blank" class="blank"><input type="hidden" name="siteId" value="' + _siteId + '"/><input type="hidden" name="locale" value="' + locale + '"/><input type="hidden" name="url" value="' + location.pathname + '"/><input type="hidden" name="href" value="' + location.href + '"/></form>');
     $("body").append(a);
     $("#pdfDown").click(function() {
       $("form[name=pdfForm]").submit();
