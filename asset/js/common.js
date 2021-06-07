@@ -15,18 +15,18 @@ $(function(){
 
   // 검색창 노출
   let search_bar_open = 0;
-  $('.search_button').click(function(){
+  $('header .search_button').click(function(){
     if( search_bar_open == 0 ){
       // if( $(window).width() > 991 ){
       //   $(this).addClass('on')
       // }
       $(this).addClass('on')
-      $('.search_wrap').addClass('on')
+      $('header .search_wrap').addClass('on')
       $('header').addClass('on')
       search_bar_open = 1;
     }else{
       $(this).removeClass('on')
-      $('.search_wrap').removeClass('on')
+      $('header .search_wrap').removeClass('on')
       $('header').removeClass('on')
       search_bar_open = 0
     }
@@ -63,7 +63,6 @@ $(function(){
 
     return false;
   })
-
 
   // 드롭다운 얼로우 클릭 시 윈도우 노출
   $('.dropdown_allow').click(function(){

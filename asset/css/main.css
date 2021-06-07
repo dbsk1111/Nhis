@@ -1,0 +1,39 @@
+.container {
+  padding-top: 50px;
+}
+
+.search_wrap.col_6 {
+  padding-top: 20px;
+}
+
+.row {
+  overflow: hidden;
+}
+
+.row > div {
+  display: inline-block;
+  float: left;
+  width: 50%;
+}
+
+.row .slider_banner {
+  position: relative;
+  float: right;
+  width: 410px;
+}
+
+@media (max-width: 991px) {
+  .row .search_wrap .search form input {
+    height: 42px;
+  }
+  .row .search_wrap .search form button {
+    flex: 0 0 42px;
+    width: 42px;
+    height: 42px;
+    background-size: 20px 20px;
+    border-radius: 15px;
+  }
+  .row .slider_banner {
+    width: 43%;
+  }
+}

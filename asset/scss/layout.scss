@@ -108,9 +108,9 @@ body.on{
         .menu_right_list{
           // 원래는 모바일 메뉴를 만들어야 하지만 임시로 스크롤 처리하기 위해 width 700px 고정
           width: 700px;
-          &.hide{
-            display: none;
-          }
+          // &.hide{
+          //   display: none;
+          // }
           .menu_list{
 
             & + .menu_list{
@@ -373,7 +373,7 @@ body.on{
                 font-family: 'Noto Sans KR', sans-serif;
                 // line-height: 1;
                 // line-height: 72px;
-                &:hover{
+                &:hover, &.on{
                   color: $red;
                   &:before{
                     content: '';
@@ -485,73 +485,75 @@ body.on{
       }
       // header_bottom
     }
-    .search_wrap{
-      display: none;
-      position: absolute;
-      // top: 100%;
-      // top: 118px;
-      width: 100%;
-      background: $bgWhite;
-      border-top: 1px solid $borderLine;
-      border-bottom: 1px solid $borderLineDark;
-      box-shadow: 0 6px 6px rgba(0,0,0,0.15);
-      z-index: 1;
-      &.on{
-        display: block;
-      }
-      .inner{
-        width: 660px;
-        padding: 44px 20px;
-        box-sizing: border-box;
-      }
-      .search{
-        // width: 50%;
-        form{
-          display: flex;
-          justify-content: space-between;
-          input{
-            flex: 1 auto;
-            margin-right: 20px;
-            padding: 0 20px;
-            width: 100%;
-            height: 60px;
-            line-height: 57px;
-            color: #6c6d72;
-            font-size: 18px;
-            border: 3px solid $red;
-            border-radius: 13px;
-            box-sizing: border-box;
-          }
-          button{
-            flex: 0 0 60px;
-            top: 0;
-            right: 0;
-            width: 60px;
-            height: 60px;
-            text-indent: -9999px;
-            background: $red url('../img/ico-search.png') no-repeat center;
-            border-radius: 20px;
-            box-shadow: 0 7px 15px 0 #ffa590;
-          }
-        }
-      }
-      .search_close{
-        // display: none;
-        width: 100%;
-        height: 40px;
-        line-height: 40px;
-        text-align: center;
-        border-top: 1px solid #e1e3e6;
-        background-color: #fff;
-        font-size: 15px;
-      }
-      // search_bar end
-    }
+    // 컴퍼넌트에서 되면 지우기
+    // .search_wrap{
+    //   display: none;
+    //   position: absolute;
+    //   // top: 100%;
+    //   // top: 118px;
+    //   width: 100%;
+    //   background: $bgWhite;
+    //   border-top: 1px solid $borderLine;
+    //   border-bottom: 1px solid $borderLineDark;
+    //   box-shadow: 0 6px 6px rgba(0,0,0,0.15);
+    //   z-index: 1;
+    //   &.on{
+    //     display: block;
+    //   }
+    //   .inner{
+    //     width: 660px;
+    //     padding: 44px 20px;
+    //     box-sizing: border-box;
+    //   }
+    //   .search{
+    //     // width: 50%;
+    //     form{
+    //       display: flex;
+    //       justify-content: space-between;
+    //       input{
+    //         flex: 1 auto;
+    //         margin-right: 20px;
+    //         padding: 0 20px;
+    //         width: 100%;
+    //         height: 60px;
+    //         line-height: 57px;
+    //         color: #6c6d72;
+    //         font-size: 18px;
+    //         border: 3px solid $red;
+    //         border-radius: 13px;
+    //         box-sizing: border-box;
+    //       }
+    //       button{
+    //         flex: 0 0 60px;
+    //         top: 0;
+    //         right: 0;
+    //         width: 60px;
+    //         height: 60px;
+    //         text-indent: -9999px;
+    //         background: $red url('../img/ico-search.png') no-repeat center;
+    //         border-radius: 20px;
+    //         box-shadow: 0 7px 15px 0 #ffa590;
+    //       }
+    //     }
+    //   }
+    //   .search_close{
+    //     // display: none;
+    //     width: 100%;
+    //     height: 40px;
+    //     line-height: 40px;
+    //     text-align: center;
+    //     border-top: 1px solid #e1e3e6;
+    //     background-color: #fff;
+    //     font-size: 15px;
+    //   }
+    //   // search_bar end
+    // }
   }
   .container{
     // 값 너무 커서 재조정, 필요한 곳만 추가
     padding-bottom: 120px;
     .content{
+      width: 100%;
       // 모바일 사이즈일 때?
       // padding: 25px 0 30px;
     }
@@ -778,36 +780,6 @@ footer{
             }
           }
         }
-      }
-      .search_wrap{
-        border-top: 0;
-        .inner{
-          width: auto;
-          padding: 30px 20px;
-        }
-        .search{
-          form{
-            input{
-              padding: 0 10px;
-              height: 36px;
-              line-height: 36px;
-              font-size: $fontSmall;
-              border-width: 2px;
-              border-radius: 9px;
-            }
-            button{
-              flex: 0 0 36px;
-              width: 36px;
-              height: 36px;
-              background-size: 17px 17px;
-              border-radius: 13px;
-            }
-          }
-          .tag_list{
-            margin-top: 15px;
-          }
-        }
-        // search_bar end
       }
     }
     .container{

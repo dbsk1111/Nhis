@@ -1,6 +1,6 @@
+/*initial css*/
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
 // font-family: 'Noto Sans KR', sans-serif;
-
 
 @font-face {
   font-family: 'NBG';
@@ -16,13 +16,7 @@
   src: url(../fonts/NanumBarunGothicBoldSubset.eot?#iefix) format('embedded-opentype'), url(../fonts/NanumBarunGothicBoldSubset.woff2) format('woff2'), url(../fonts/NanumBarunGothicBoldSubset.woff) format('woff'), url(../fonts/NanumBarunGothicBoldSubset.ttf) format('truetype')
 }
 
-
-
-/*initial css*/
-
-*{
-  margin: 0; padding: 0;
-}
+*{ margin: 0; padding: 0; }
 
 html,body{
   height: 100%;
@@ -54,9 +48,37 @@ a{
     // color: $fontColorHover;
   }
 }
+
+form{
+  display: inline;
+}
+
+input, select{
+  outline: none;
+  &:focus{
+    border: 1px solid $borderLineDark;
+  }
+}
+
 input{
   outline: none;
   font-family: inherit;
+  box-sizing: border-box;
+}
+
+select{
+  position: relative;
+  top: 2px;
+}
+
+select, .bbs_search_bar{
+  padding: 0 0 0 8px;
+  height: 32px;
+  line-height: 32px;
+  font-size: $change15;
+  border: 1px solid $borderLine;
+  border-radius: 5px;
+  box-sizing: border-box;
 }
 
 button{

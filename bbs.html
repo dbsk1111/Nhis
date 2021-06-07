@@ -244,7 +244,7 @@
                   <!-- $bgColor: #f6f6f6; -->
                   <ul>
                     <li>
-                      <a href="#">민원여기요</a>
+                      <a href="civil.html">민원여기요</a>
                       <ul class="gnb_submenu">
                         <li><a href="#">민원안내</a></li>
                         <li><a href="#">개인민원</a></li>
@@ -286,7 +286,7 @@
                       </ul>
                     </li>
                     <li>
-                      <a href="#">공단요모조모</a>
+                      <a href="bbs.html">공단요모조모</a>
                       <ul class="gnb_submenu">
                         <li><a href="#">공단소개</a></li>
                         <li><a href="#">조직 및 인원</a></li>
@@ -322,7 +322,7 @@
               </nav>
             </div>
           </div>
-          <div class="search_wrap">
+          <div class="search_wrap gnb">
           	<div class="inner">
           		<div class="search">
                 <form action="index.html" method="post">
@@ -343,22 +343,61 @@
           <aside>
             <ul>
               <li><a href="index.html"><img src="./asset/img/ico-location-home.png" alt="홈"></a></li>
-              <li><a href="#">기타</a></li>
-              <li><a href="login.html">회원서비스</a></li>
-              <li><a href="signup.html">회원가입</a></li>
+              <li><a href="#">공단요모조모</a></li>
+              <li><a href="#">공단소개 </a></li>
+              <li><a href="#">이사장</a></li>
+              <li><a href="#">인터뷰/메시지</a></li>
             </ul>
           </aside>
           <nav class="snb">
-            <p class="snb_title">회원서비스</p>
+            <p class="snb_title">공단소개</p>
             <ul>
-              <li><a href="#" class="on">로그인</a></li>
-              <li><a href="signup.html">회원가입</a></li>
-              <li><a href="#">아이디/비밀번호찾기</a></li>
+              <li>
+                <a href="#" class="dropdown_allow red on">이사장</a>
+                <ul class="on">
+                  <li><a href="#">이사장 인사말</a></li>
+                  <li><a href="#">현장/갤러리</a></li>
+                  <li><a href="#" class="on">인터뷰/메시지</a></li>
+                  <li><a href="#">역대 이사장</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="#" class="dropdown_allow red">비전 및 핵심가치</a>
+                <ul>
+                  <li><a href="#">미션</a></li>
+                  <li><a href="#">비전 및 비전선언문</a></li>
+                  <li><a href="#">핵심가치</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="#" class="dropdown_allow red">경영전략</a>
+                <ul>
+                  <li><a href="#">전략체계도</a></li>
+                  <li><a href="#">경영개선 로드맵 전략</a></li>
+                  <li><a href="#">경영환경 및 경영개선 방향</a></li>
+                  <li><a href="#">경영개선 추진체계</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="#" class="dropdown_allow red">상징</a>
+                <ul>
+                  <li><a href="#">CI</a></li>
+                  <li><a href="#">캐릭터</a></li>
+                  <li><a href="#">건강보험의 노래</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="#" class="dropdown_allow red">이사회</a>
+                <ul>
+                  <li><a href="#">이사회 구성 및 운영</a></li>
+                  <li><a href="#">이사회 개최사항</a></li>
+                </ul>
+              </li>
             </ul>
           </nav>
           <div class="content">
             <div class="content_title">
-              <h2>로그인</h2>
+              <h2>인터뷰/메시지</h2>
               <div class="utililty">
                 <ul>
                   <li><a href="#" onclick="window.print()" class="print_button utililty_button pointer"></a></li>
@@ -366,46 +405,174 @@
                 </ul>
               </div>
             </div>
-            <div class="sub_page_banner">
-              <img src="./asset/img/ico-sub-company.png" alt="회원가입">
-              <p>개인회원은 별도의 회원가입 절차 없이 공동인증서 또는 금융인증서를 통해 바로 로그인 할 수 있습니다.<br>단, 사업장회원은 회원가입을 하셔야만 로그인 하실 수 있습니다.</p>
-            </div>
-            <div class="tab_menu">
-              <ul>
-                <li><a href="#" class="on">개인</a></li>
-                <li><a href="#">사업장</a></li>
-              </ul>
-            </div>
-            <div class="choice">
-              <ul>
-                <li>
-                  <p>처음 오셨나요?</p>
-                  <img src="./asset/img/login_individual_icon01.png" alt="사업장">
-                  <div class="button_wrap">
-                    <a href="#" class="button">공동·금융 인증서등록</a><a href="#" class="button light">공동인증서안내</a>
+            <div>
+              <div class="bbs">
+                <div class="bbs_top">
+                  <div class="left_area">
+                    총<span class="text_dark">119</span>건 (<span class="text_dark">1</span>/<span>12</span>페이지)
+                    <select id="page_list_num" name="page_list_num">
+                      <option value="50">50개</option>
+                      <option value="40">40개</option>
+                      <option value="30">30개</option>
+                      <option value="20">20개</option>
+                      <option value="10" selected >10개</option>
+                    </select>
+                    <a href="#page_list_num" class="button small">적용</a>
                   </div>
-                </li>
-                <li>
-                  <p>로그인</p>
-                  <img src="./asset/img/login_individual_icon02.png" alt="요양기관">
-                  <div class="button_wrap">
-                    <a href="#" class="button">공동·금융인증서</a>
+                  <form action="#" id="bbs_search">
+                    <select name="" id="" for="bbs_search">
+                      <option value="acticle_all" selected>전체</option>
+                      <option value="acticle_title">제목</option>
+                      <option value="acticle_content">내용</option>
+                      <option value="acticle_title_content">제목 + 내용</option>
+                    </select>
+                    <input type="text" id="bbs_search_value" name="bbs_search_value" class="bbs_search_bar" placeholder="검색어를 입력해주세요">
+                    <input type="submit" value="검색" class="button small">
+                  </form>
+                </div>
+                <div class="bbs_bottom">
+                  <div class="table_wrap">
+                    <table>
+                      <colgroup>
+                        <col>
+                        <col>
+                        <col>
+                        <col>
+                        <col>
+                        <col>
+                      </colgroup>
+                      <thead>
+                        <tr>
+                          <th>번호</th>
+                          <th>제목</th>
+                          <th>담당부서</th>
+                          <th>등록일</th>
+                          <th>첨부</th>
+                          <th>조회수</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>119</td>
+                          <td>
+                            <a href="#" title="[인터뷰] &quot;부자 나라의 가난한 정부... 언제까지 돈이 없다고 할 건가&quot;(오마이뉴스, 2021.3.10.) 자세히 보기">[인터뷰] "부자 나라의 가난한 정부... 언제까지 돈이 없다고 할 건가"(오마이뉴스, 2021.3.10.)</a>
+                          </td>
+                          <td>국민소통실</td>
+                          <td>2021.03.10</td>
+                          <td></td>
+                          <td>987</td>
+                        </tr>
+                        <tr>
+                          <td>118</td>
+                          <td>
+                            <a href="#" title="[인터뷰] &quot;공공병원 확충에 건강보험 미래 달렸다&quot; (내일신문, 2021.2.25.) 자세히 보기">[인터뷰] "공공병원 확충에 건강보험 미래 달렸다" (내일신문, 2021.2.25.)</a>
+                          </td>
+                          <td>국민소통실</td>
+                          <td>2021.02.25</td>
+                          <td></td>
+                          <td>533</td>
+                        </tr>
+                        <tr>
+                          <td>117</td>
+                          <td>
+                            <a href="#" title="[칼럼] '코로나19 한국 공공병원 확대는 금지된 정책인가?' (2021.1.6, 한겨레)  자세히 보기">[칼럼] '코로나19 한국 공공병원 확대는 금지된 정책인가?' (2021.1.6, 한겨레)</a>
+                          </td>
+                          <td>국민소통실</td>
+                          <td>2021.01.06</td>
+                          <td></td>
+                          <td>385</td>
+                        </tr>
+                        <tr>
+                          <td>116</td>
+                          <td>
+                            <a href="#" title="[인터뷰]'모두'를 위한 공공병원 '국가'가 나서면 된다(시사IN, 2020.12.14.)  자세히 보기">[인터뷰]'모두'를 위한 공공병원 '국가'가 나서면 된다(시사IN, 2020.12.14.)</a>
+                          </td>
+                          <td>국민소통실</td>
+                          <td>2020.12.14</td>
+                          <td></td>
+                          <td>264</td>
+                        </tr>
+                        <tr>
+                          <td>115</td>
+                          <td>
+                            <a href="#" title="[인터뷰]김용익 &quot;어려울수록 건보가 튼튼해야...보험료율 3.2% 인상 필요&quot;(연합뉴스, 2020.8.23.) 자세히 보기">[인터뷰]김용익 "어려울수록 건보가 튼튼해야...보험료율 3.2% 인상 필요"(연합뉴스, 2020.8.23.)</a>
+                          </td>
+                          <td>국민소통실</td>
+                          <td>2020.08.24</td>
+                          <td></td>
+                          <td>933</td>
+                        </tr>
+                        <tr>
+                          <td>114</td>
+                          <td>
+                            <a href="#" title="[인터뷰] “코로나19가 바꾼 세상 어떻게 준비할 것인가?” (KBS 아침마당, 2020.7.9.)  자세히 보기">[인터뷰] “코로나19가 바꾼 세상 어떻게 준비할 것인가?” (KBS 아침마당, 2020.7.9.)</a>
+                          </td>
+                          <td>국민소통실</td>
+                          <td>2020.07.09</td>
+                          <td></td>
+                          <td>610</td>
+                        </tr>
+                        <tr>
+                          <td>113</td>
+                          <td>
+                            <a href="#" title="[인터뷰] “건강보험 적용항목 늘어나면, 착한 적자 자연스럽게 없어져” (한겨레신문 2020.6.26)   자세히 보기">[인터뷰] “건강보험 적용항목 늘어나면, 착한 적자 자연스럽게 없어져” (한겨레신문 2020.6.26)</a>
+                          </td>
+                          <td>국민소통실</td>
+                          <td>2020.06.26</td>
+                          <td></td>
+                          <td>581</td>
+                        </tr>
+                        <tr>
+                          <td>112</td>
+                          <td>
+                            <a href="#" title="[인터뷰] “동네의원 원격진료땐… 종합병원 환자분산 건보재정 윈윈” (매일경제 2020.6.17.) 자세히 보기">[인터뷰] “동네의원 원격진료땐… 종합병원 환자분산 건보재정 윈윈” (매일경제 2020.6.17.)</a>
+                          </td>
+                          <td>국민소통실</td>
+                          <td>2020.06.17</td>
+                          <td></td>
+                          <td>373</td>
+                        </tr>
+                        <tr>
+                          <td>111</td>
+                          <td>
+                            <a href="#" title="[인터뷰] 포스트코로나19 : 달라지는 미래 (KBS 시사기획 창, 2020.5.30.)  자세히 보기">[인터뷰] 포스트코로나19 : 달라지는 미래 (KBS 시사기획 창, 2020.5.30.)</a>
+                          </td>
+                          <td>국민소통실</td>
+                          <td>2020.06.03</td>
+                          <td></td>
+                          <td>401</td>
+                        </tr>
+                        <tr>
+                          <td>110</td>
+                          <td>
+                            <a href="#" title="[기고] '국민'의 건강보험인 이유(2020.4.23, 한겨레)  자세히 보기">[기고] '국민'의 건강보험인 이유(2020.4.23, 한겨레)</a>
+                          </td>
+                          <td>국민소통실</td>
+                          <td>2020.06.03</td>
+                          <td></td>
+                          <td>650</td>
+                        </tr>
+                      </tbody>
+                    </table>
                   </div>
-                </li>
-              </ul>
-            </div>
-            <div class="definition">
-              <dl>
-                <dt class="bg_red">공동/금융 인증서</dt>
-                <dd>은행에서 발급하는 공동인증서/금융인증서 없는 경우, 은행에서 신규로 발급 받으시거나 가까운 공단(건강보험/국민연금)으로 신분증 지참, 인증서 발급신청이 가능합니다.(본인방문 필수)<br><a href="#" class="button light">인증서안내</a>
-                </dd>
-                <dt>브라우저인증서</dt>
-                <dd>웹브라우저에 인증서를 등록하여 사용하는 서비스입니다.</dd>
-                <dt>인증서관리</dt>
-                <dd>인증서 검증, 암호변경, 소유자 검증을 하는 서비스입니다.</dd>
-                <dt>기타</dt>
-                <dd>로그인이 안될 경우 <a href="#" class="point_dark underline">시스템 오류 도우미</a>를 이용해 주세요</dd>
-              </dl>
+                  <div class="pagination">
+                    <a href="#" class="first_btn hide"></a>
+                    <a href="#" class="prev_btn hide"></a>
+                    <a href="#" class="on">1</a>
+                    <a href="#">2</a>
+                    <a href="#">3</a>
+                    <a href="#">4</a>
+                    <a href="#">5</a>
+                    <a href="#" class="mobile_hide">6</a>
+                    <a href="#" class="mobile_hide">7</a>
+                    <a href="#" class="mobile_hide">8</a>
+                    <a href="#" class="mobile_hide">9</a>
+                    <a href="#" class="mobile_hide">10</a>
+                    <a href="#" class="next_btn"></a>
+                    <a href="#" class="last_btn"></a>
+                  </div>
+                </div>
+              </div>
             </div>
             <div class="survey">
               <ul>

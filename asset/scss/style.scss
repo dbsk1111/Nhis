@@ -7,7 +7,7 @@
 // css 초기화
 @import "initial.scss";
 // 공통 요소
-@import "common.scss";
+// @import "common.scss";
 // 공통 컴포넌트
 @import "component.scss";
 // 공통 레이아웃
@@ -15,8 +15,8 @@
 
 // 페이지 분화
 // 메인 페이지
-// @import "main.scss";
+@import "main.scss";
 // 서브 페이지
 @import "subpage.scss";
 // 갤러리 페이지, 페이지 구성이 특별할 경우 다시 분화
-@import "signup.scss";
+@import "bxslider.scss";
