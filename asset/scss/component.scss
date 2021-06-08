@@ -789,3 +789,14 @@
     }
   }
 }
+@media screen and ( max-width: 640px ){
+  .tab_menu{
+    overflow-x: auto;
+    overflow-y: hidden;
+    ul{
+      li{
+        overflow: visible;
+      }
+    }
+  }
+}

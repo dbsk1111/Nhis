@@ -932,6 +932,16 @@ button {
   }
 }
 
+@media screen and (max-width: 640px) {
+  .tab_menu {
+    overflow-x: auto;
+    overflow-y: hidden;
+  }
+  .tab_menu ul li {
+    overflow: visible;
+  }
+}
+
 body.on {
   overflow: hidden;
 }
