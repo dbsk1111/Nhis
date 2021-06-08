@@ -343,165 +343,199 @@
           </div>
       </header>
       <div class="container main">
-        <div class="inner">
+        <!-- <div class="inner"> -->
           <div class="content">
-            <div class="row">
-              <div class="search_wrap on col_6">
-                <div class="search">
-                  <form action="index.html" method="post">
-                    <input class="search_bar" type="text" placeholder="무엇을 찾고 계시나요?"><button type="submit">검색</button>
-                  </form>
-                  <div class="tag_list">
-                    <a href="#">자격득실확인서</a>
-                    <a href="#">납부확인서</a>
-                    <a href="#">건강보험자격득실확인서</a>
+            <div class="row banner">
+              <div class="inner">
+                <div class="search_wrap on col_6">
+                  <div class="search">
+                    <form action="index.html" method="post">
+                      <input class="search_bar" type="text" placeholder="무엇을 찾고 계시나요?"><button type="submit">검색</button>
+                    </form>
+                    <div class="tag_list">
+                      <a href="#">자격득실확인서</a>
+                      <a href="#">납부확인서</a>
+                      <a href="#">건강보험자격득실확인서</a>
+                    </div>
                   </div>
                 </div>
-              </div>
-              <div class="slider_banner col_6">
-                <div class="bxslider main_slider">
-                  <div><img src="./asset/img/banner/20210528_banner_pc01.png"></div>
-                  <div><img src="./asset/img/banner/main-banner-pc-1101-10.jpg"></div>
+                <div class="slider_banner col_6">
+                  <div class="bxslider main_slider">
+                    <div>
+                      <img src="./asset/img/banner/20210528_banner_pc01.png" class="mobile_hide">
+                      <img src="./asset/img/banner/20210528_banner_m01.png" class="mobile_show">
+                    </div>
+                    <div>
+                      <img src="./asset/img/banner/main-banner-pc-1101-10.jpg" class="mobile_hide">
+                      <img src="./asset/img/banner/main-banner-m-1101-10.jpg" class="mobile_show">
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
             <div class="row visitor_menu">
-              <input type="radio" id="personal" name="tab" checked>
-              <input type="radio" id="business" name="tab">
-              <div class="visitor_menu_top">
-                <span class="title_text">방문자별 맞춤 메뉴</span>
-                <span class="visitor_menu_toggle">
-                  <label for="personal">개인</label>
-                  <label for="business">사업장</label>
-                </span>
+              <div class="inner">
+                <input type="radio" id="personal" name="tab" checked>
+                <input type="radio" id="business" name="tab">
+                <div class="visitor_menu_top">
+                  <span class="title_text">방문자별 맞춤 메뉴</span>
+                  <span class="visitor_menu_toggle">
+                    <label for="personal">개인</label>
+                    <label for="business">사업장</label>
+                  </span>
+                </div>
+                <div class="visitor_menu_bottom">
+                  <div class="visitor_menu_personal">
+                    <ul>
+                      <li>
+                        <a href="#">
+                          <span class="qualification"></span>
+                          <p>자격득실<br>확인서 발급</p>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#">
+                          <span class="refund"></span>
+                          <p>환급금<br>조회/신청</p>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#">
+                          <span class="insurance"></span>
+                          <p>보험료<br>조회/납부</p>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#">
+                          <span class="burden"></span>
+                          <p>본인부담<br>상한액조회</p>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#">
+                          <span class="calculation"></span>
+                          <p>보험료<br>계산기</p>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#">
+                          <span class="transfer"></span>
+                          <p>재난적의료비<br>지원안내</p>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#">
+                          <span class="checkups"></span>
+                          <p>건강검진<br>대상조회</p>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#">
+                          <span class="family"></span>
+                          <p>가족<br>건강관리</p>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#">
+                          <span class="company-inquiry"></span>
+                          <p>민원<br>서식자료실</p>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="visitor_menu_business">
+                    <ul>
+                      <li>
+                        <a href="#">
+                          <span class="staff-search"></span>
+                          <p>사업장<br>직원조회</p>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#">
+                          <span class="inform"></span>
+                          <p>사업장적용<br>통보서</p>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#">
+                          <span class="amount-money"></span>
+                          <p>보험료<br>고지내역조회</p>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#">
+                          <span class="insurance"></span>
+                          보험료<br>고지납부현황</p>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#">
+                          <span class="insurance-payment"></span>
+                          <p>4대보험<br>완납증명서</p>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#">
+                          <span class="edi"></span>
+                          <p>건강보험<br>납부확인서</p>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#">
+                          <span class="company-form"></span>
+                          <p>연급<br>납부확인서</p>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#">
+                          <span class="company-certificate"></span>
+                          <p>증명서 발급<br>사실확인</p>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#">
+                          <span class="company-inquiry"></span>
+                          <p>보험료<br>산출내역신청</p>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
               </div>
-              <div class="visitor_menu_bottom">
-                <div class="visitor_menu_personal">
+            </div>
+            <div class="row flex menu_list">
+              <div class="inner">
+                <div class="box_radius border_top_left_radius news_area">
                   <ul>
-                    <li>
-                      <a href="#">
-                        <span class="qualification"></span>
-                        자격득실<br>확인서 발급
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#">
-                        <span class="refund"></span>
-                        환급금<br>조회/신청
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#">
-                        <span class="insurance">
-                          <!-- <img src="./asset/img/personal/ico-insurance.png" alt="보험료 조회/납부"> -->
-                        </span>
-                        보험료<br>조회/납부
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#">
-                        <span class="burden">
-                          <!-- <img src="./asset/img/personal/ico-burden.png" alt="본인부담상한액조회"> -->
-                        </span>
-                        본인부담<br>상한액조회
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#">
-                        <span class="calculation">
-                          <!-- <img src="./asset/img/personal/ico-calculation.png" alt="보험료 계산기"> -->
-                        </span>
-                        보험료<br>계산기
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#">
-                        <span class="transfer">
-                          <!-- <img src="./asset/img/personal/ico-transfer.png" alt="재난적의료비 지원안내"> -->
-                        </span>
-                        재난적의료비<br>지원안내
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#">
-                        <span class="checkups">
-                          <!-- <img src="./asset/img/personal/ico-checkups.png" alt="건강검진 대상조회"> -->
-                        </span>
-                        건강검진<br>대상조회
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#">
-                        <span class="family">
-                          <!-- <img src="./asset/img/personal/ico-family.png" alt="가족 건강관리"> -->
-                        </span>
-                        가족<br>건강관리
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#">
-                        <span class="company-inquiry">
-                          <!-- <img src="./asset/img/personal/ico-company-inquiry.png" alt="민원 서식자료실"> -->
-                        </span>
-                        민원<br>서식자료실
-                      </a>
-                    </li>
+                    <li><a href="#">공지사항</a></li>
+                    <li><a href="#">채용공고</a></li>
+                    <li><a href="#">보도자료</a></li>
+                    <li><a href="#">입찰공고</a></li>
+                    <li><a href="#">경영공시</a></li>
                   </ul>
                 </div>
-                <div class="visitor_menu_business">
+                <div class="box_radius border_top_right_radius health_info">
+                  <p class="title_text">건강정보</p>
+                  <ul>
+                    <li><a href="#">가까운 병의원 찾기</a></li>
+                    <li><a href="#">검진기관 찾기</a></li>
+                    <li><a href="#">건강iN 매거진</a></li>
+                    <li><a href="#">건강뉴스</a></li>
+                  </ul>
+                </div>
+                <div class="box_radius border_bottom_right_radius guarantee">
                   <ul>
                     <li>
                       <a href="#">
-                        <span class="staff-search"></span>
-                        사업장<br>직원조회
+                        <p class="title_text">보장성강화</p>
+                        <p>병원비 걱정없는 든든한 나라<br>건강보험 보장성강화 대책을 알아보세요!</p>
                       </a>
                     </li>
                     <li>
                       <a href="#">
-                        <span class="inform"></span>
-                        사업장적용<br>통보서
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#">
-                        <span class="amount-money"></span>
-                        보험료<br>고지내역조회
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#">
-                        <span class="insurance"></span>
-                        보험료<br>고지납부현황
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#">
-                        <span class="insurance-payment"></span>
-                        4대보험<br>완납증명서
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#">
-                        <span class="edi"></span>
-                        건강보험<br>납부확인서
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#">
-                        <span class="company-form"></span>
-                        연급<br>납부확인서
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#">
-                        <span class="company-certificate"></span>
-                        증명서 발급<br>사실확인
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#">
-                        <span class="company-inquiry"></span>
-                        보험료<br>산출내역신청
+                        <p class="title_text">건강보험연구원</p>
+                        <p>Health Insurance Research<br>Institute(HIRI)</p>
                       </a>
                     </li>
                   </ul>
@@ -509,43 +543,9 @@
               </div>
             </div>
             <div class="row flex">
-              <div class="box_radius border_top_left_radius news_area">
-                <ul>
-                  <li><a href="#">공지사항</a></li>
-                  <li><a href="#">채용공고</a></li>
-                  <li><a href="#">보도자료</a></li>
-                  <li><a href="#">입찰공고</a></li>
-                  <li><a href="#">경영공시</a></li>
-                </ul>
-              </div>
-              <div class="box_radius border_top_right_radius health_info">
-                <p class="title_text">건강정보</p>
-                <ul>
-                  <li><a href="#">가까운 병의원 찾기</a></li>
-                  <li><a href="#">검진기관 찾기</a></li>
-                  <li><a href="#">건강iN 매거진</a></li>
-                  <li><a href="#">건강뉴스</a></li>
-                </ul>
-              </div>
-              <div class="box_radius border_bottom_right_radius guarantee">
-                <ul>
-                  <li>
-                    <a href="#">
-                      <p class="title_text">보장성강화</p>
-                      <p>병원비 걱정없는 든든한 나라<br>건강보험 보장성강화 대책을 알아보세요!</p>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#">
-                      <p class="title_text">건강보험연구원</p>
-                      <p>Health Insurance Research<br>Institute(HIRI)</p>
-                    </a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-            <div class="row flex">
-              <div class="box_radius customer_area">
+              <div class="inner">
+
+                <div class="box_radius customer_area">
                 <div class="customer">
                   <p class="title_text">고객센터</p>
                   <div class="box_wrap">
@@ -565,7 +565,7 @@
                   <p class="title_text">소식지 신청/해지</p>
                   <div class="box_radius">
                     <a href="#">
-                      <p>더 빠르게<br>건강보험 정책과<br>정보를 제공합니다</p>
+                      <p>더 빠르게<br class="br_after">건강보험 정책과<br class="br_after">정보를 제공합니다</p>
                     </a>
                   </div>
                 </div>
@@ -583,10 +583,11 @@
                   </div>
                 </div>
               </div>
+              </div>
 
 
             </div>
-          </div>
+          <!-- </div> -->
         </div>
       </div>
       <footer>
