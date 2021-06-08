@@ -2,12 +2,12 @@ $(function(){
   // gnb submenu 노출
   $('#gnb_menu li').mouseenter(function(){
     $('header, .header_bottom').addClass('on')
-    $('.search_wrap').removeClass('on')
+    $('.search_wrap.gnb').removeClass('on')
   })
   $('.header_bottom').mouseleave(function(){
     $('.header_bottom').removeClass('on')
     if( search_bar_open > 0){
-      $('.search_wrap').addClass('on')
+      $('.search_wrap.gnb').addClass('on')
     }else{
       $('header').removeClass('on')
     }

@@ -310,31 +310,34 @@
 
 @media ( max-width: 1180px ){
   .row.flex{
-    .box_radius{
-      &.customer_area{
-        .customer{
-          flex: 0 1 51%;
-          .box_wrap{
-            .box_radius{
-              &:first-child{
-                // background-image: url('../img/i-customer-1.png');
-                background-image: none;
-              }
-              &:last-child{
-                // background-image: url('../img/i-customer-2.png');
-                background-image: none;
+    .inner{
+      .box_radius{
+        &.customer_area{
+          .customer{
+            flex: 0 1 51%;
+            .box_wrap{
+              .box_radius{
+                &:first-child{
+                  // background-image: url('../img/i-customer-1.png');
+                  background-image: none;
+                }
+                &:last-child{
+                  // background-image: url('../img/i-customer-2.png');
+                  background-image: none;
+                }
               }
             }
           }
-        }
-        .news_letter{
-          flex: 0 1 24%;
-        }
-        .app_download{
-          flex: 0 1 21%;
+          .news_letter{
+            flex: 0 1 24%;
+          }
+          .app_download{
+            flex: 0 1 21%;
+          }
         }
       }
     }
+
   }
 }
 

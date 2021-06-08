@@ -84,6 +84,15 @@
     font-size: $fontNormal;
     color: $fontColorDark;
     font-family: 'Noto Sans KR', sans-serif;
+    .bx-pager-link{
+      width: 6px;
+      height: 6px;
+      background: none;
+      border: 1px solid $fontColorDark;
+      &.active{
+        background: $fontColorDark;
+      }
+    }
   }
 
 }
@@ -106,6 +115,16 @@
     }
     img.mobile_hide{
       display: none;
+    }
+    .bx-controls-direction, .bx-controls-auto{
+      display: none;
+    }
+    .bx-controls.bx-has-controls-auto.bx-has-pager{
+      .bx-pager{
+        position: relative;
+        width: auto;
+        text-align: center;
+      }
     }
   }
 }
