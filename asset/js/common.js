@@ -69,21 +69,24 @@ $(function(){
     if( $(this).hasClass('lnb_window')){
       if( $(this).hasClass('on') ){
         $(this).removeClass('on')
-        $(this).prev().removeClass('on')
       }else{
         $('.lnb_window').removeClass('on')
-        $('.lnb_window').prev().removeClass('on')
         $(this).addClass('on')
-        $(this).prev().addClass('on')
       }
     }else{
       $(this).toggleClass('on')
-      $(this).prev().toggleClass('on')
     }
-
-    $(this).next('ul').toggleClass('on')
     return false;
   })
+
+  $('html').click(function(e){
+    if(!$(e.target).parents().hasClass('window')){
+       if( !$(e.target).hasClass('window') ){
+         $('.lnb_window, .selet_box').removeClass('on')
+      }
+    }
+  })
+
 
   // 탑으로 버튼
   $('.back_to_top').click(function(){

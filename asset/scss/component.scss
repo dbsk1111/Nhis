@@ -2,6 +2,9 @@
 .dropdown_allow{
   // padding-right: 15px;
   position: relative;
+  &.on + .window{
+    display: block;
+  }
   &:after{
     content: '';
     position: absolute;
@@ -371,9 +374,6 @@
   a{
     font-size: var(--change15);
     line-height: 2;
-  }
-  &.on{
-    display: block;
   }
 }
 

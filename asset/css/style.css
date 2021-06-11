@@ -109,6 +109,10 @@ button {
   position: relative;
 }
 
+.dropdown_allow.on + .window {
+  display: block;
+}
+
 .dropdown_allow:after {
   content: '';
   position: absolute;
@@ -508,10 +512,6 @@ button {
 .window a {
   font-size: var(--change15);
   line-height: 2;
-}
-
-.window.on {
-  display: block;
 }
 
 .tag_list {
