@@ -8,11 +8,6 @@
   img.mobile_show{
     display: none;
   }
-  .bx-viewport{
-    .main_slider{
-
-    }
-  }
   .bx-controls-direction{
     position: relative;
     bottom: 0px;
@@ -37,7 +32,6 @@
       right: auto;
       left: 70px;
       bottom: 0;
-      // bottom: -21.5px;
       position: relative;
       width: 16px;
       a{
@@ -94,7 +88,6 @@
       }
     }
   }
-
 }
 @media ( max-width: 991px ){
   .row.banner{
@@ -107,9 +100,6 @@
 }
 @media ( max-width: 640px ){
   .bx-wrapper{
-    .bx-viewport{
-
-    }
     img.mobile_show{
       display: block;
     }

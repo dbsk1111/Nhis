@@ -58,12 +58,12 @@
                   display: block;
                 }
               }
+              &.dropdown_allow.on + ul{
+                display: block;
+              }
               &.dropdown_allow + ul{
                 display: none;
                 padding-bottom: 10px;
-                &.on{
-                  display: block;
-                }
                 li{
                   a{
                     position: relative;
