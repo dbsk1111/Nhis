@@ -13,9 +13,20 @@ $(function(){
   //   pagerType: 'short'
   // });
 
-  let bxSlider = $('.bxslider').bxSlider();
+  let bxSlider = $('.bxslider').bxSlider({
+    responsive: true,
+    auto: true,
+    autoControls: true,
+    autoStart: true,
+    infiniteLoop: true,
+    // 이거 끄고 나서 클래스 자동 인식 질문
+    stopAutoOnClick: true,
+    pager: true,
+    // slideWidth: 410,
+    touchEnabled: false,
+    pagerType: 'short'
+  });
 
-  buildSlider();
   function buildSlider(){
     if( $(window).outerWidth() < 640 ){
       bxSlider.reloadSlider({
@@ -47,6 +58,8 @@ $(function(){
       });
     }
   }
+
+  buildSlider();
 
   // $(window).resize(function(){
   //   if( $(window).width() <= 640 ){
